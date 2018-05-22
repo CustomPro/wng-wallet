@@ -1,0 +1,14 @@
+[
+  {
+    "id": "block",
+    "defaultMessage": "Block"
+  },
+  {
+    "id": "info",
+    "defaultMessage": "info"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  }
+]

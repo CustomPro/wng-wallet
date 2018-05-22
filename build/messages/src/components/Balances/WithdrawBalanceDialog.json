@@ -1,0 +1,18 @@
+[
+  {
+    "id": "withdrawbalancedialog.title",
+    "defaultMessage": "Withdraw {name}"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "withdrawbalancedialog.message",
+    "defaultMessage": "To withdraw {asset} please contact our licensed agent at the following email address: {email}"
+  },
+  {
+    "id": "withdrawbalancedialog.withdraw_subject",
+    "defaultMessage": "Withdrawal request for {asset} from {account}"
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "secretPhrase",
+    "defaultMessage": "Secret phrase"
+  },
+  {
+    "id": "username",
+    "defaultMessage": "Username"
+  },
+  {
+    "id": "email",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "password",
+    "defaultMessage": "Password"
+  },
+  {
+    "id": "import_backup",
+    "defaultMessage": "Restore wallet"
+  },
+  {
+    "id": "submit",
+    "defaultMessage": "Submit"
+  },
+  {
+    "id": "register",
+    "defaultMessage": "Register"
+  },
+  {
+    "id": "required_error",
+    "defaultMessage": "This field is required"
+  },
+  {
+    "id": "login_normal",
+    "defaultMessage": "Login with an account"
+  },
+  {
+    "id": "login_secret_phrase",
+    "defaultMessage": "Login with a secret phrase"
+  },
+  {
+    "id": "choose_file",
+    "defaultMessage": "Choose file"
+  }
+]

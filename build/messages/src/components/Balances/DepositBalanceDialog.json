@@ -1,0 +1,30 @@
+[
+  {
+    "id": "depositbalancedialog.title",
+    "defaultMessage": "Deposit {name}"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "depositbalancedialog.message",
+    "defaultMessage": "To deposit {asset} please contact our licensed agent at the following email address: {email}"
+  },
+  {
+    "id": "stay_tuned",
+    "defaultMessage": "Stay tuned for more updates."
+  },
+  {
+    "id": "depositbalancedialog.deposit_subject",
+    "defaultMessage": "Deposit request for {asset} from {account}"
+  },
+  {
+    "id": "depositbalancedialog.bitcoin_deposit_message",
+    "defaultMessage": "Your bitcoin deposit address is {address}."
+  },
+  {
+    "id": "depositbalancedialog.bitcoin_deposit_confirmation_message",
+    "defaultMessage": "Deposits will be credited after one confirmation. If you didn't get your deposit credited please contact {email}."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "verifications.reject",
+    "defaultMessage": "Reject"
+  },
+  {
+    "id": "verifications.approve",
+    "defaultMessage": "Approve"
+  },
+  {
+    "id": "verifications.current_status",
+    "defaultMessage": "Current Status: {status}"
+  },
+  {
+    "id": "verifications.full_name",
+    "defaultMessage": "Full Name"
+  },
+  {
+    "id": "verifications.account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "verifications.address",
+    "defaultMessage": "Address"
+  }
+]

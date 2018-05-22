@@ -1,0 +1,46 @@
+[
+  {
+    "id": "balancestable.balances",
+    "defaultMessage": "Balances"
+  },
+  {
+    "id": "balancestable.send_balance_button",
+    "defaultMessage": "Transfer {asset}"
+  },
+  {
+    "id": "balancestable.deposit_balance_button",
+    "defaultMessage": "Deposit {asset}"
+  },
+  {
+    "id": "balancestable.withdraw_balance_button",
+    "defaultMessage": "Withdraw {asset}"
+  },
+  {
+    "id": "balancestable.send_balance",
+    "defaultMessage": "Send balance"
+  },
+  {
+    "id": "balancestable.deposit_balance",
+    "defaultMessage": "Deposit balance"
+  },
+  {
+    "id": "balancestable.withdraw_balance",
+    "defaultMessage": "Withdraw balance"
+  },
+  {
+    "id": "USD",
+    "defaultMessage": "USD"
+  },
+  {
+    "id": "SGD",
+    "defaultMessage": "SGD"
+  },
+  {
+    "id": "CNY",
+    "defaultMessage": "CNY"
+  },
+  {
+    "id": "BTC",
+    "defaultMessage": "BTC"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "id": "order_success",
+    "defaultMessage": "Your order has been successfully placed"
+  },
+  {
+    "id": "order.buy",
+    "defaultMessage": "Get {asset}"
+  },
+  {
+    "id": "order.sell",
+    "defaultMessage": "Give {asset}"
+  },
+  {
+    "id": "order.quantity",
+    "defaultMessage": "Quantity {asset}"
+  },
+  {
+    "id": "order.price",
+    "defaultMessage": "Price {asset} / {token}"
+  },
+  {
+    "id": "order.token_per_asset_label",
+    "defaultMessage": "1 {token}:"
+  },
+  {
+    "id": "order.total",
+    "defaultMessage": "Total {token}:"
+  },
+  {
+    "id": "confirm_order",
+    "defaultMessage": "Confirm Order"
+  },
+  {
+    "id": "clear_values",
+    "defaultMessage": "Clear values"
+  },
+  {
+    "id": "number_error",
+    "defaultMessage": "Please enter a number"
+  },
+  {
+    "id": "order_form.fee",
+    "defaultMessage": "Fee in {tokenName}"
+  },
+  {
+    "id": "order_form.minimum_fee_error_description",
+    "defaultMessage": "The minimum fee is {minimumFee} {tokenName}"
+  },
+  {
+    "id": "order_form.advanced_options",
+    "defaultMessage": "Advanced options"
+  }
+]

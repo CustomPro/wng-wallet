@@ -1,0 +1,194 @@
+[
+  {
+    "id": "transactiontypes.OrdinaryPayment",
+    "defaultMessage": "Ordinary Payment"
+  },
+  {
+    "id": "transactiontypes.ArbitraryMessage",
+    "defaultMessage": "Arbitrary Message"
+  },
+  {
+    "id": "transactiontypes.AliasAssignment",
+    "defaultMessage": "Alias Assignment"
+  },
+  {
+    "id": "transactiontypes.PollCreation",
+    "defaultMessage": "Poll Creation"
+  },
+  {
+    "id": "transactiontypes.VoteCasting",
+    "defaultMessage": "Vote Casting"
+  },
+  {
+    "id": "transactiontypes.HubAnnouncement",
+    "defaultMessage": "Hub Announcement"
+  },
+  {
+    "id": "transactiontypes.AccountInfo",
+    "defaultMessage": "Account Info"
+  },
+  {
+    "id": "transactiontypes.AliasSell",
+    "defaultMessage": "Alias Sell"
+  },
+  {
+    "id": "transactiontypes.AliasBuy",
+    "defaultMessage": "Alias Buy"
+  },
+  {
+    "id": "transactiontypes.AliasDelete",
+    "defaultMessage": "Alias Delete"
+  },
+  {
+    "id": "transactiontypes.PhasingVoteCasting",
+    "defaultMessage": "Phasing Vote Casting"
+  },
+  {
+    "id": "transactiontypes.AccountProperty",
+    "defaultMessage": "Account Property"
+  },
+  {
+    "id": "transactiontypes.AccountPropertyDelete",
+    "defaultMessage": "Account Property Delete"
+  },
+  {
+    "id": "transactiontypes.AssetIssuance",
+    "defaultMessage": "Asset Issuance"
+  },
+  {
+    "id": "transactiontypes.AssetTransfer",
+    "defaultMessage": "Asset Transfer"
+  },
+  {
+    "id": "transactiontypes.AskOrderPlacement",
+    "defaultMessage": "Ask Order Placement"
+  },
+  {
+    "id": "transactiontypes.BidOrderPlacement",
+    "defaultMessage": "Bid Order Placement"
+  },
+  {
+    "id": "transactiontypes.AskOrderCancellation",
+    "defaultMessage": "Ask Order Cancellation"
+  },
+  {
+    "id": "transactiontypes.BidOrderCancellation",
+    "defaultMessage": "Bid Order Cancellation"
+  },
+  {
+    "id": "transactiontypes.DividendPayment",
+    "defaultMessage": "Dividend Payment"
+  },
+  {
+    "id": "transactiontypes.AssetDelete",
+    "defaultMessage": "Asset Delete"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsListing",
+    "defaultMessage": "Digital Goods Listing"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsDelisting",
+    "defaultMessage": "Digital Goods Delisting"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsPriceChange",
+    "defaultMessage": "Digital Goods Price Change"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsQuantityChange",
+    "defaultMessage": "Digital Goods Quantity Change"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsPurchase",
+    "defaultMessage": "Digital Goods Purchase"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsDelivery",
+    "defaultMessage": "Digital Goods Delivery"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsFeedback",
+    "defaultMessage": "Digital Goods Feedback"
+  },
+  {
+    "id": "transactiontypes.DigitalGoodsRefund",
+    "defaultMessage": "Digital Goods Refund"
+  },
+  {
+    "id": "transactiontypes.EffectiveBalanceLeasing",
+    "defaultMessage": "Effective Balance Leasing"
+  },
+  {
+    "id": "transactiontypes.SetPhasingOnly",
+    "defaultMessage": "Set Phasing Only"
+  },
+  {
+    "id": "transactiontypes.CurrencyIssuance",
+    "defaultMessage": "Currency Issuance"
+  },
+  {
+    "id": "transactiontypes.ReserveIncrease",
+    "defaultMessage": "Reserve Increase"
+  },
+  {
+    "id": "transactiontypes.ReserveClaim",
+    "defaultMessage": "Reserve Claim"
+  },
+  {
+    "id": "transactiontypes.CurrencyTransfer",
+    "defaultMessage": "Currency Transfer"
+  },
+  {
+    "id": "transactiontypes.PublishExchangeOffer",
+    "defaultMessage": "Publish Exchange Offer"
+  },
+  {
+    "id": "transactiontypes.ExchangeBuy",
+    "defaultMessage": "Exchange Buy"
+  },
+  {
+    "id": "transactiontypes.ExchangeSell",
+    "defaultMessage": "Exchange Sell"
+  },
+  {
+    "id": "transactiontypes.CurrencyMinting",
+    "defaultMessage": "Currency Minting"
+  },
+  {
+    "id": "transactiontypes.CurrencyDeletion",
+    "defaultMessage": "Currency Deletion"
+  },
+  {
+    "id": "transactiontypes.TaggedDataUpload",
+    "defaultMessage": "Tagged Data Upload"
+  },
+  {
+    "id": "transactiontypes.TaggedDataExtend",
+    "defaultMessage": "Tagged Data Extend"
+  },
+  {
+    "id": "transactiontypes.ShufflingCreation",
+    "defaultMessage": "Shuffling Creation"
+  },
+  {
+    "id": "transactiontypes.ShufflingRegistration",
+    "defaultMessage": "Shuffling Registration"
+  },
+  {
+    "id": "transactiontypes.ShufflingProcessing",
+    "defaultMessage": "Shuffling Processing"
+  },
+  {
+    "id": "transactiontypes.ShufflingRecipients",
+    "defaultMessage": "Shuffling Recipients"
+  },
+  {
+    "id": "transactiontypes.ShufflingVerification",
+    "defaultMessage": "Shuffling Verification"
+  },
+  {
+    "id": "transactiontypes.ShufflingCancellation",
+    "defaultMessage": "Shuffling Cancellation"
+  }
+]

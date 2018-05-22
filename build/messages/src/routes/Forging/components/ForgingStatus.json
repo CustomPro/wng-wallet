@@ -1,0 +1,22 @@
+[
+  {
+    "id": "unknown",
+    "defaultMessage": "Unknown"
+  },
+  {
+    "id": "is_forging",
+    "defaultMessage": "Forging"
+  },
+  {
+    "id": "not_forging",
+    "defaultMessage": "Not forging"
+  },
+  {
+    "id": "forging_status",
+    "defaultMessage": "Forging status:"
+  },
+  {
+    "id": "click_here_to_check",
+    "defaultMessage": "Click here to check"
+  }
+]

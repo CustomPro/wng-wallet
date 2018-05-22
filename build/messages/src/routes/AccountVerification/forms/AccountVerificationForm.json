@@ -1,0 +1,54 @@
+[
+  {
+    "id": "account_verification_form.full_name",
+    "defaultMessage": "Full Name"
+  },
+  {
+    "id": "account_verification_form.address",
+    "defaultMessage": "Address"
+  },
+  {
+    "id": "account_verification_form.comments",
+    "defaultMessage": "Comments"
+  },
+  {
+    "id": "account_verification_form.identity_proof",
+    "defaultMessage": "Upload proof of identity"
+  },
+  {
+    "id": "account_verification_form.identity_proof_example",
+    "defaultMessage": "Proof of identity / passport"
+  },
+  {
+    "id": "account_verification_form.address_proof",
+    "defaultMessage": "Upload proof of address"
+  },
+  {
+    "id": "account_verification_form.clear",
+    "defaultMessage": "Clear"
+  },
+  {
+    "id": "account_verification_form.submit",
+    "defaultMessage": "Submit"
+  },
+  {
+    "id": "account_verification_form.application_processing",
+    "defaultMessage": "Your application is currently being processed"
+  },
+  {
+    "id": "account_verification_form.application_rejected",
+    "defaultMessage": "Your application has been rejected. Please reapply below."
+  },
+  {
+    "id": "account_verification_form.application_approved",
+    "defaultMessage": "Your application has been approved."
+  },
+  {
+    "id": "account_verification_form.required_field",
+    "defaultMessage": "This field is required."
+  },
+  {
+    "id": "account_verification_form.application_acknowledgement",
+    "defaultMessage": "Thank you for your application. We will be in touch."
+  }
+]

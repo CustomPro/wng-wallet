@@ -1,0 +1,54 @@
+[
+  {
+    "id": "voucherstable.vouchers",
+    "defaultMessage": "Vouchers"
+  },
+  {
+    "id": "voucherstable.send_voucher_button",
+    "defaultMessage": "Transfer {asset}"
+  },
+  {
+    "id": "voucherstable.deposit_voucher_button",
+    "defaultMessage": "Deposit {asset}"
+  },
+  {
+    "id": "voucherstable.withdraw_voucher_button",
+    "defaultMessage": "Withdraw {asset}"
+  },
+  {
+    "id": "voucherstable.send_voucher",
+    "defaultMessage": "Send voucher"
+  },
+  {
+    "id": "voucherstable.deposit_voucher",
+    "defaultMessage": "Deposit voucher"
+  },
+  {
+    "id": "voucherstable.withdraw_voucher",
+    "defaultMessage": "Withdraw voucher"
+  },
+  {
+    "id": "USD",
+    "defaultMessage": "USD"
+  },
+  {
+    "id": "SGD",
+    "defaultMessage": "SGD"
+  },
+  {
+    "id": "CNY",
+    "defaultMessage": "CNY"
+  },
+  {
+    "id": "BTC",
+    "defaultMessage": "BTC"
+  },
+  {
+    "id": "voucherstable.redemption_status_account_text",
+    "defaultMessage": "Redeemed by {account}"
+  },
+  {
+    "id": "voucherstable.redemption_status_timestamp_text",
+    "defaultMessage": "on {date}"
+  }
+]

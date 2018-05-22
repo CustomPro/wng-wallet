@@ -1,0 +1,78 @@
+[
+  {
+    "id": "transfer_success",
+    "defaultMessage": "Your transfer has been successfully made"
+  },
+  {
+    "id": "transfer_error",
+    "defaultMessage": "Your transfer could not be made."
+  },
+  {
+    "id": "transfer_error_description",
+    "defaultMessage": "The server produced the following error description: {errorDescription}, error code: {errorCode}"
+  },
+  {
+    "id": "quantity",
+    "defaultMessage": "Quantity {asset}"
+  },
+  {
+    "id": "next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "recipient",
+    "defaultMessage": "Recipient"
+  },
+  {
+    "id": "sendbalance.recipient_hint",
+    "defaultMessage": "Enter recipient in this format: {token}-XXXX-XXXX-XXXX-XXXX"
+  },
+  {
+    "id": "confirm_send",
+    "defaultMessage": "Confirm send"
+  },
+  {
+    "id": "clear_values",
+    "defaultMessage": "Clear values"
+  },
+  {
+    "id": "recipient_error",
+    "defaultMessage": "Please enter a recipient"
+  },
+  {
+    "id": "invalid_recipient_error",
+    "defaultMessage": "This account number is invalid"
+  },
+  {
+    "id": "number_error",
+    "defaultMessage": "Please enter a number"
+  },
+  {
+    "id": "confirm_send_balance_amount",
+    "defaultMessage": "Please confirm that you want to send {amount} {asset}"
+  },
+  {
+    "id": "confirm_send_balance_account",
+    "defaultMessage": "to the following account: {account}"
+  },
+  {
+    "id": "sendbalance.confirm_send_money_fee",
+    "defaultMessage": "Please note that this transaction has a fee of {fee} {token}"
+  },
+  {
+    "id": "send_balance_form.fee",
+    "defaultMessage": "Fee in {tokenName}"
+  },
+  {
+    "id": "send_balance_form.minimum_fee_error_description",
+    "defaultMessage": "The minimum fee is {minimumFee} {tokenName}"
+  },
+  {
+    "id": "send_balance_form.advanced_options",
+    "defaultMessage": "Advanced options"
+  }
+]

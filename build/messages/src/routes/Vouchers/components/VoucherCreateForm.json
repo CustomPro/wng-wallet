@@ -1,0 +1,74 @@
+[
+  {
+    "id": "voucher_create_form.value",
+    "defaultMessage": "Value"
+  },
+  {
+    "id": "voucher_create_form.amount_of_vouchers",
+    "defaultMessage": "Amount of vouchers"
+  },
+  {
+    "id": "voucher_create_form.code",
+    "defaultMessage": "Code"
+  },
+  {
+    "id": "voucher_create_form.recipient",
+    "defaultMessage": "Recipient (optional)"
+  },
+  {
+    "id": "voucher_create_form.voucher_will_expire",
+    "defaultMessage": "Voucher will expire"
+  },
+  {
+    "id": "voucher_create_form.expiration_date",
+    "defaultMessage": "Expiration date"
+  },
+  {
+    "id": "voucher_create_form.cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "voucher_create_form.next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "voucher_create_form.value_is_required",
+    "defaultMessage": "Value is required"
+  },
+  {
+    "id": "voucher_create_form.voucher_create_confirm",
+    "defaultMessage": "You are creating a voucher with the following attributes:"
+  },
+  {
+    "id": "voucher_create_form.voucher_create_multiple_confirm",
+    "defaultMessage": "You are creating {amount} vouchers with the following attributes:"
+  },
+  {
+    "id": "voucher_create_form.submit",
+    "defaultMessage": "Submit"
+  },
+  {
+    "id": "voucher_create_form.prev",
+    "defaultMessage": "Prev"
+  },
+  {
+    "id": "voucher_create_form.close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "voucher_create_form.voucher_create_success",
+    "defaultMessage": "Your vouchers have been created"
+  },
+  {
+    "id": "voucher_create_form.voucher_create_error",
+    "defaultMessage": "Your vouchers have not been created"
+  },
+  {
+    "id": "voucher_create_form.invalid_account",
+    "defaultMessage": "This account number is not valid"
+  },
+  {
+    "id": "voucher_create_form.multiple_vouchers",
+    "defaultMessage": "Generate multiple vouchers"
+  }
+]

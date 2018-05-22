@@ -1,0 +1,18 @@
+[
+  {
+    "id": "vouchers.title",
+    "defaultMessage": "Vouchers"
+  },
+  {
+    "id": "vouchers.subtitle",
+    "defaultMessage": "List of current vouchers"
+  },
+  {
+    "id": "vouchers.account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "vouchers.create_new_voucher",
+    "defaultMessage": "Create new voucher"
+  }
+]

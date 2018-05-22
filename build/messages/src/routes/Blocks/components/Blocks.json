@@ -1,0 +1,18 @@
+[
+  {
+    "id": "blocks.blocks",
+    "defaultMessage": "Blocks"
+  },
+  {
+    "id": "account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "transaction",
+    "defaultMessage": "Transaction"
+  },
+  {
+    "id": "blocks.block",
+    "defaultMessage": "Block"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "forging.lease_balance",
+    "defaultMessage": "Lease Balance"
+  },
+  {
+    "id": "forging.current_lease",
+    "defaultMessage": "Your balance is leased out to {account} until block {block}."
+  },
+  {
+    "id": "forging.lease_end",
+    "defaultMessage": "Estimated date for leasing to end:"
+  },
+  {
+    "id": "forging.lease_out",
+    "defaultMessage": "You can lease out"
+  },
+  {
+    "id": "forging.lease_success",
+    "defaultMessage": "Succesfully leased out your balance. The leased balance will become effective after one block."
+  },
+  {
+    "id": "forging.lease_error",
+    "defaultMessage": "The recipient needs at least one outgoing transaction before balance can be leased to it."
+  }
+]

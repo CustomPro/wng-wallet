@@ -1,0 +1,10 @@
+[
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "transaction_title",
+    "defaultMessage": "Transaction {transaction} info"
+  }
+]

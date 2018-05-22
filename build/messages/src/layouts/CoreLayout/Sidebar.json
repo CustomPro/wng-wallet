@@ -1,0 +1,74 @@
+[
+  {
+    "id": "home",
+    "defaultMessage": "Home"
+  },
+  {
+    "id": "accounts",
+    "defaultMessage": "Accounts"
+  },
+  {
+    "id": "verifications",
+    "defaultMessage": "Verifications"
+  },
+  {
+    "id": "forging",
+    "defaultMessage": "Forging"
+  },
+  {
+    "id": "balances",
+    "defaultMessage": "Balances"
+  },
+  {
+    "id": "exchange",
+    "defaultMessage": "Exchange"
+  },
+  {
+    "id": "blocks",
+    "defaultMessage": "Blocks"
+  },
+  {
+    "id": "settings",
+    "defaultMessage": "Settings"
+  },
+  {
+    "id": "account_verification",
+    "defaultMessage": "Account Verification"
+  },
+  {
+    "id": "logout",
+    "defaultMessage": "Logout"
+  },
+  {
+    "id": "logout_confirmation",
+    "defaultMessage": "Are you sure you want to logout?"
+  },
+  {
+    "id": "sidebar.view_more_balances",
+    "defaultMessage": "View more balances"
+  },
+  {
+    "id": "sidebar.login",
+    "defaultMessage": "Login"
+  },
+  {
+    "id": "sidebar.register",
+    "defaultMessage": "Register"
+  },
+  {
+    "id": "sidebar.authorized_user",
+    "defaultMessage": "Authorized User"
+  },
+  {
+    "id": "sidebar.unauthorized_user",
+    "defaultMessage": "Unauthorized User"
+  },
+  {
+    "id": "sidebar.vouchers",
+    "defaultMessage": "Vouchers"
+  },
+  {
+    "id": "sidebar.redeem_voucher",
+    "defaultMessage": "Redeem Voucher"
+  }
+]

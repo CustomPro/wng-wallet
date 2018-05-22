@@ -1,0 +1,10 @@
+[
+  {
+    "id": "confirmalert.confirm",
+    "defaultMessage": "Confirm"
+  },
+  {
+    "id": "confirmalert.cancel",
+    "defaultMessage": "Cancel"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "account_information.account_has_balance",
+    "defaultMessage": "Account has a balance of"
+  },
+  {
+    "id": "account_information.transactions",
+    "defaultMessage": "Transactions"
+  },
+  {
+    "id": "account_information.balances",
+    "defaultMessage": "Balances"
+  },
+  {
+    "id": "account_information.authorized_user",
+    "defaultMessage": "Authorized User"
+  },
+  {
+    "id": "account_information.unauthorized_user",
+    "defaultMessage": "Unauthorized User"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "transactioninformation.info",
+    "defaultMessage": "Info"
+  },
+  {
+    "id": "details",
+    "defaultMessage": "Details"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "qr_scanner_button.scan_qr_code",
+    "defaultMessage": "Scan QR Code"
+  },
+  {
+    "id": "qr_scanner_button.allow_camera_access",
+    "defaultMessage": "Please allow camera access to scan a QR code"
+  }
+]

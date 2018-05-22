@@ -1,0 +1,58 @@
+[
+  {
+    "id": "exchange.exchange",
+    "defaultMessage": "EXCHANGE"
+  },
+  {
+    "id": "exchange.title",
+    "defaultMessage": "Asset Exchange"
+  },
+  {
+    "id": "exchange.subtitle",
+    "defaultMessage": "Exchange {asset} for {token}"
+  },
+  {
+    "id": "assets",
+    "defaultMessage": "Assets"
+  },
+  {
+    "id": "account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "transactions",
+    "defaultMessage": "Transactions"
+  },
+  {
+    "id": "your_balance",
+    "defaultMessage": "Your Balance"
+  },
+  {
+    "id": "orders",
+    "defaultMessage": "Orders"
+  },
+  {
+    "id": "sell_orders",
+    "defaultMessage": "Sell Orders"
+  },
+  {
+    "id": "buy_orders",
+    "defaultMessage": "Buy Orders"
+  },
+  {
+    "id": "my_orders",
+    "defaultMessage": "My Orders"
+  },
+  {
+    "id": "history",
+    "defaultMessage": "History"
+  },
+  {
+    "id": "public",
+    "defaultMessage": "Public"
+  },
+  {
+    "id": "personal",
+    "defaultMessage": "Personal"
+  }
+]

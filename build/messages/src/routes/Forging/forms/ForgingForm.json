@@ -1,0 +1,22 @@
+[
+  {
+    "id": "is_forging",
+    "defaultMessage": "Forging"
+  },
+  {
+    "id": "stop_forging",
+    "defaultMessage": "Stop Forging"
+  },
+  {
+    "id": "start_forging",
+    "defaultMessage": "Start Forging"
+  },
+  {
+    "id": "manual_forging_node",
+    "defaultMessage": "Input forging node URL manually"
+  },
+  {
+    "id": "forging_balance",
+    "defaultMessage": "Balance available for forging:"
+  }
+]

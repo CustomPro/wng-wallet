@@ -1,0 +1,42 @@
+[
+  {
+    "id": "encrypted_backup",
+    "defaultMessage": "Safe Backup"
+  },
+  {
+    "id": "decrypted_backup",
+    "defaultMessage": "Decrypted Backup"
+  },
+  {
+    "id": "download_encrypted_backup",
+    "defaultMessage": "Download Encrypted Wallet"
+  },
+  {
+    "id": "download_decrypted_backup",
+    "defaultMessage": "Download Decrypted Wallet"
+  },
+  {
+    "id": "download_backup_help",
+    "defaultMessage": "By choosing \"Download Wallet\", you will download an encrypted backup of your wallet to your current device. You can restore your backup file on our login page by choosing the \"Restore Wallet\" option and providing your login and password. Backups are not synchronised between devices."
+  },
+  {
+    "id": "download_backup_safari_help",
+    "defaultMessage": "When using the Safari browser, after clicking the download button you need to save the page (press CMD + S) as type \"Page Source\" and name it \"wallet.json\"."
+  },
+  {
+    "id": "download_decrypted_backup_help",
+    "defaultMessage": "Here you can download your decrypted wallet. You can use this to import into a new account."
+  },
+  {
+    "id": "download_decrypted_backup_warning",
+    "defaultMessage": "WARNING: anyone with access to this file can access your funds. Be careful where to store it."
+  },
+  {
+    "id": "language",
+    "defaultMessage": "Language"
+  },
+  {
+    "id": "choose_language",
+    "defaultMessage": "Choose language"
+  }
+]

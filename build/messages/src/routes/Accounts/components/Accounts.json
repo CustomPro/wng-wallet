@@ -1,0 +1,22 @@
+[
+  {
+    "id": "accounts",
+    "defaultMessage": "Accounts"
+  },
+  {
+    "id": "accounts_subtitle",
+    "defaultMessage": "List of registered accounts"
+  },
+  {
+    "id": "search_help",
+    "defaultMessage": "Search for username, email or account number"
+  },
+  {
+    "id": "search",
+    "defaultMessage": "Search"
+  },
+  {
+    "id": "send_currency",
+    "defaultMessage": "Send {currency}"
+  }
+]

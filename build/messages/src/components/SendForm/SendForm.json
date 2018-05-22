@@ -1,0 +1,90 @@
+[
+  {
+    "id": "send_form.send_success",
+    "defaultMessage": "Successfully sent!"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "recipient",
+    "defaultMessage": "Recipient"
+  },
+  {
+    "id": "send_form.recipient_hint",
+    "defaultMessage": "Enter recipient in this format: {token}-XXXX-XXXX-XXXX-XXXX"
+  },
+  {
+    "id": "send_form.amount",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "send_form.cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "send_form.next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "send_form.confirm_send_money_amount",
+    "defaultMessage": "Please confirm that you want to send {amount} {tokenName}"
+  },
+  {
+    "id": "send_form.confirm_send_money_account",
+    "defaultMessage": "to the following account: {account}"
+  },
+  {
+    "id": "send_form.confirm_send_money_fee",
+    "defaultMessage": "Please note that this transaction has a fee of {fee} {token}"
+  },
+  {
+    "id": "send_form.previous",
+    "defaultMessage": "Previous"
+  },
+  {
+    "id": "send_form.submit",
+    "defaultMessage": "Submit"
+  },
+  {
+    "id": "send_form.required_error",
+    "defaultMessage": "This field is required"
+  },
+  {
+    "id": "send_form.invalid_account",
+    "defaultMessage": "This account number is not valid"
+  },
+  {
+    "id": "send_form.send_error",
+    "defaultMessage": "Your transaction could not be made."
+  },
+  {
+    "id": "send_form.send_error_description",
+    "defaultMessage": "The server produced the following error description: {errorDescription}, error code: {errorCode}"
+  },
+  {
+    "id": "send_form.fee",
+    "defaultMessage": "Fee in {tokenName}"
+  },
+  {
+    "id": "send_form.minimum_fee_error_description",
+    "defaultMessage": "The minimum fee is {minimumFee} {tokenName}"
+  },
+  {
+    "id": "send_form.advanced_options",
+    "defaultMessage": "Advanced options"
+  },
+  {
+    "id": "send_form.authorized_user",
+    "defaultMessage": "Authorized User"
+  },
+  {
+    "id": "send_form.unauthorized_user",
+    "defaultMessage": "Unauthorized User"
+  },
+  {
+    "id": "send_form.scan_qr_code",
+    "defaultMessage": "Scan QR Code"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "sendbalancedialog.title",
+    "defaultMessage": "Send {name}"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  }
+]

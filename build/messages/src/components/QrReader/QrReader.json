@@ -1,0 +1,14 @@
+[
+  {
+    "id": "qrReader.scan",
+    "defaultMessage": "Scan"
+  },
+  {
+    "id": "qrReader.clear",
+    "defaultMessage": "Clear"
+  },
+  {
+    "id": "qrReader.device",
+    "defaultMessage": "Device"
+  }
+]

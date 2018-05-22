@@ -1,0 +1,10 @@
+[
+  {
+    "id": "redeem_voucher_dialog.redeem_voucher",
+    "defaultMessage": "Redeem voucher"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  }
+]

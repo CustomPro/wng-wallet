@@ -1,0 +1,46 @@
+[
+  {
+    "id": "cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "receive_currency",
+    "defaultMessage": "Receive {currency}"
+  },
+  {
+    "id": "account_number",
+    "defaultMessage": "Account Number"
+  },
+  {
+    "id": "your_account_number_is",
+    "defaultMessage": "Your account number is:"
+  },
+  {
+    "id": "click_to_copy_account",
+    "defaultMessage": "Click to copy your account number"
+  },
+  {
+    "id": "copied_account",
+    "defaultMessage": "Successfully copied your account number!"
+  },
+  {
+    "id": "account_help_message",
+    "defaultMessage": "Communicate your account number to your interlocutor so they can send you {currency}. It is perfectly safe to make your account number public."
+  },
+  {
+    "id": "account_public_key",
+    "defaultMessage": "Account Public Key"
+  },
+  {
+    "id": "public_key_help",
+    "defaultMessage": "In some rare cases the sender might ask for your public key. Normally you do not need this."
+  },
+  {
+    "id": "scan_qr_code",
+    "defaultMessage": "Scan QR Code"
+  },
+  {
+    "id": "qr_help_message",
+    "defaultMessage": "This QR code contains your account number. Use a QR scanning mobile app in order to access it."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "admin_login",
+    "defaultMessage": "Admin login"
+  },
+  {
+    "id": "login",
+    "defaultMessage": "Login"
+  },
+  {
+    "id": "login_subtitle",
+    "defaultMessage": "Login into {website_name} now"
+  },
+  {
+    "id": "successfully_registered",
+    "defaultMessage": "Successfully registered your account. You can now login."
+  },
+  {
+    "id": "connection_error",
+    "defaultMessage": "Could not connect. Please try again later"
+  },
+  {
+    "id": "could_not_decrypt",
+    "defaultMessage": "We could not log you in with this information"
+  },
+  {
+    "id": "could_not_find_secretphrase",
+    "defaultMessage": "Your username and / or email does not exist, we could not find the secretphrase."
+  },
+  {
+    "id": "login.is_not_admin",
+    "defaultMessage": "You do not have sufficient permissions to access this page."
+  },
+  {
+    "id": "username_email_exists",
+    "defaultMessage": "This username or email already exists and cannot be used."
+  },
+  {
+    "id": "website_name",
+    "defaultMessage": "DBN Wallet"
+  }
+]

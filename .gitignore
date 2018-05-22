@@ -1,6 +1,7 @@
-#node modules#
+#folders#
 /node_modules/*
-
+/bin/*
+/server/*
 
 #OS generated files#
 .DS_Store

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "qrReader.qrReader",
+    "defaultMessage": "QR Reader"
+  },
+  {
+    "id": "info",
+    "defaultMessage": "info"
+  },
+  {
+    "id": "qrReader.close",
+    "defaultMessage": "Close"
+  }
+]

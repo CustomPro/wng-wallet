@@ -1,0 +1,22 @@
+[
+  {
+    "id": "forging",
+    "defaultMessage": "Forging"
+  },
+  {
+    "id": "total_earned_forging",
+    "defaultMessage": "Total earned from forging:"
+  },
+  {
+    "id": "forging_explanation",
+    "defaultMessage": "Forging is used to validate transactions. Each time you forge you create a new block which allows you to collect all transaction fees in this block. If there are no transactions in a block you will get no fees. The more {tokenName} you have, the higher chance of forging a block. To forge you must have had a minimum of 2,000 {tokenName} in your account for at least 1 day."
+  },
+  {
+    "id": "warning",
+    "defaultMessage": "WARNING:"
+  },
+  {
+    "id": "forging_help",
+    "defaultMessage": "Submitting this form will send your private key to the specified node."
+  }
+]

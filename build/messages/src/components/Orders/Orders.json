@@ -1,0 +1,14 @@
+[
+  {
+    "id": "orders.select_order",
+    "defaultMessage": "Select Order"
+  },
+  {
+    "id": "orders.selected",
+    "defaultMessage": "Selected"
+  },
+  {
+    "id": "orders.cancel",
+    "defaultMessage": "Cancel"
+  }
+]

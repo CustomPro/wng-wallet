@@ -1,0 +1,74 @@
+[
+  {
+    "id": "voucher_redeem_form.value",
+    "defaultMessage": "Value"
+  },
+  {
+    "id": "voucher_redeem_form.amount",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "voucher_redeem_form.code",
+    "defaultMessage": "Code"
+  },
+  {
+    "id": "voucher_redeem_form.recipient",
+    "defaultMessage": "Recipient"
+  },
+  {
+    "id": "voucher_redeem_form.expiration_date",
+    "defaultMessage": "Expiration date"
+  },
+  {
+    "id": "voucher_redeem_form.cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "voucher_redeem_form.next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_confirm",
+    "defaultMessage": "You are redeeming a voucher with the following attributes:"
+  },
+  {
+    "id": "voucher_redeem_form.submit",
+    "defaultMessage": "Submit"
+  },
+  {
+    "id": "voucher_redeem_form.prev",
+    "defaultMessage": "Prev"
+  },
+  {
+    "id": "voucher_redeem_form.close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_success",
+    "defaultMessage": "Your voucher has been redeemed"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_error",
+    "defaultMessage": "Your voucher cannot be redeemed"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_error_none",
+    "defaultMessage": "This voucher does not exist"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_error_amount",
+    "defaultMessage": "This voucher has been fully redeemed"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_error_expired",
+    "defaultMessage": "This voucher has expired"
+  },
+  {
+    "id": "voucher_redeem_form.voucher_redeem_error_recipient",
+    "defaultMessage": "You do not have the permission to redeem this voucher"
+  },
+  {
+    "id": "voucher_redeem_form.invalid_account",
+    "defaultMessage": "This account number is not valid"
+  }
+]

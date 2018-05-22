@@ -1,0 +1,254 @@
+[
+  {
+    "id": "empty_rows",
+    "defaultMessage": "There is nothing here at the moment."
+  },
+  {
+    "id": "sender",
+    "defaultMessage": "Sender"
+  },
+  {
+    "id": "quantity",
+    "defaultMessage": "Quantity"
+  },
+  {
+    "id": "total",
+    "defaultMessage": "Total"
+  },
+  {
+    "id": "seller",
+    "defaultMessage": "Seller"
+  },
+  {
+    "id": "buyer",
+    "defaultMessage": "Buyer"
+  },
+  {
+    "id": "ask_order",
+    "defaultMessage": "Ask Order"
+  },
+  {
+    "id": "bid_order",
+    "defaultMessage": "Bid Order"
+  },
+  {
+    "id": "name",
+    "defaultMessage": "Name"
+  },
+  {
+    "id": "description",
+    "defaultMessage": "Description"
+  },
+  {
+    "id": "decimals",
+    "defaultMessage": "Decimals"
+  },
+  {
+    "id": "balance",
+    "defaultMessage": "Balance"
+  },
+  {
+    "id": "type",
+    "defaultMessage": "Type"
+  },
+  {
+    "id": "amount",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "fee",
+    "defaultMessage": "Fee"
+  },
+  {
+    "id": "date",
+    "defaultMessage": "Date"
+  },
+  {
+    "id": "account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "prev",
+    "defaultMessage": "Prev"
+  },
+  {
+    "id": "sender_public_key",
+    "defaultMessage": "Sender Public Key"
+  },
+  {
+    "id": "signature",
+    "defaultMessage": "Signature"
+  },
+  {
+    "id": "transaction_index",
+    "defaultMessage": "Transaction Index"
+  },
+  {
+    "id": "confirmations",
+    "defaultMessage": "Confirmations"
+  },
+  {
+    "id": "full_hash",
+    "defaultMessage": "Full Hash"
+  },
+  {
+    "id": "ec_block_id",
+    "defaultMessage": "EC Block ID"
+  },
+  {
+    "id": "sender_RS",
+    "defaultMessage": "Sender RS"
+  },
+  {
+    "id": "recipient_RS",
+    "defaultMessage": "Recipient RS"
+  },
+  {
+    "id": "ec_block_height",
+    "defaultMessage": "EC Block Height"
+  },
+  {
+    "id": "block",
+    "defaultMessage": "Block"
+  },
+  {
+    "id": "block_timestamp",
+    "defaultMessage": "Block Timestamp"
+  },
+  {
+    "id": "deadline",
+    "defaultMessage": "Deadline"
+  },
+  {
+    "id": "timestamp",
+    "defaultMessage": "Timestamp"
+  },
+  {
+    "id": "height",
+    "defaultMessage": "Height"
+  },
+  {
+    "id": "price",
+    "defaultMessage": "Price"
+  },
+  {
+    "id": "price_per_unit",
+    "defaultMessage": "Price per Unit"
+  },
+  {
+    "id": "total_quantity",
+    "defaultMessage": "Total Quantity"
+  },
+  {
+    "id": "select_asset",
+    "defaultMessage": "Select asset"
+  },
+  {
+    "id": "age",
+    "defaultMessage": "Age"
+  },
+  {
+    "id": "total_amount",
+    "defaultMessage": "Total Amount"
+  },
+  {
+    "id": "fees",
+    "defaultMessage": "Fees"
+  },
+  {
+    "id": "generator",
+    "defaultMessage": "Generator"
+  },
+  {
+    "id": "id",
+    "defaultMessage": "ID"
+  },
+  {
+    "id": "address",
+    "defaultMessage": "Address"
+  },
+  {
+    "id": "comments",
+    "defaultMessage": "Comments"
+  },
+  {
+    "id": "status",
+    "defaultMessage": "Status"
+  },
+  {
+    "id": "files",
+    "defaultMessage": "Files"
+  },
+  {
+    "id": "actions",
+    "defaultMessage": "Actions"
+  },
+  {
+    "id": "base_target",
+    "defaultMessage": "Base Target"
+  },
+  {
+    "id": "generatorRS",
+    "defaultMessage": "Generator RS"
+  },
+  {
+    "id": "next_block",
+    "defaultMessage": "Next Block"
+  },
+  {
+    "id": "number_of_transactions",
+    "defaultMessage": "Number of Transactions"
+  },
+  {
+    "id": "previous_block",
+    "defaultMessage": "Previous Block"
+  },
+  {
+    "id": "total_fee",
+    "defaultMessage": "Total Fee"
+  },
+  {
+    "id": "asset",
+    "defaultMessage": "Asset"
+  },
+  {
+    "id": "trades",
+    "defaultMessage": "Trades"
+  },
+  {
+    "id": "total_trades",
+    "defaultMessage": "Total Trades"
+  },
+  {
+    "id": "initial_quantity",
+    "defaultMessage": "Initial Quantity"
+  },
+  {
+    "id": "information",
+    "defaultMessage": "Information"
+  },
+  {
+    "id": "token_per_asset",
+    "defaultMessage": "1 {token}"
+  },
+  {
+    "id": "code",
+    "defaultMessage": "Code"
+  },
+  {
+    "id": "Value",
+    "defaultMessage": "Value"
+  },
+  {
+    "id": "expiration_date",
+    "defaultMessage": "Expiration Date"
+  },
+  {
+    "id": "redemption_status",
+    "defaultMessage": "Redemption Status"
+  }
+]

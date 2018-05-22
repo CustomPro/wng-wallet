@@ -1,0 +1,46 @@
+[
+  {
+    "id": "search_form.search",
+    "defaultMessage": "Search"
+  },
+  {
+    "id": "search_form.accounts",
+    "defaultMessage": "Accounts"
+  },
+  {
+    "id": "search_form.blocks",
+    "defaultMessage": "Blocks"
+  },
+  {
+    "id": "search_form.account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "search_form.transaction",
+    "defaultMessage": "Transaction"
+  },
+  {
+    "id": "search_form.block",
+    "defaultMessage": "Block"
+  },
+  {
+    "id": "search_form.transactions",
+    "defaultMessage": "Transactions"
+  },
+  {
+    "id": "search_form.error_search_term",
+    "defaultMessage": "Please enter a search term"
+  },
+  {
+    "id": "search_form.error_accounts",
+    "defaultMessage": "This account number is invalid, please try again."
+  },
+  {
+    "id": "search_form.error_blocks",
+    "defaultMessage": "This block ID is invalid, please try again."
+  },
+  {
+    "id": "search_form.error_transactions",
+    "defaultMessage": "This transaction ID is invalid, please try again."
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "website_name",
+    "defaultMessage": "{currency} Wallet"
+  },
+  {
+    "id": "website_subtitle",
+    "defaultMessage": "Send and receive {currency}"
+  },
+  {
+    "id": "balance_and_currency",
+    "defaultMessage": "Balance: {balance} {currency}"
+  },
+  {
+    "id": "receive_currency",
+    "defaultMessage": "Receive {currency}"
+  },
+  {
+    "id": "send_currency",
+    "defaultMessage": "Send {currency}"
+  },
+  {
+    "id": "transactions",
+    "defaultMessage": "Transactions"
+  },
+  {
+    "id": "account",
+    "defaultMessage": "Account"
+  },
+  {
+    "id": "transaction",
+    "defaultMessage": "Transaction"
+  },
+  {
+    "id": "update_balance_title",
+    "defaultMessage": "Click to update your balance"
+  },
+  {
+    "id": "click_to_copy_account",
+    "defaultMessage": "Click to copy your account number"
+  },
+  {
+    "id": "copied_to_clipboard",
+    "defaultMessage": "Copied to clipboard"
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "voucher_create_form.create_voucher",
+    "defaultMessage": "Create new voucher"
+  },
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  }
+]

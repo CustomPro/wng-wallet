@@ -1,0 +1,14 @@
+[
+  {
+    "id": "verifications.title",
+    "defaultMessage": "Account Verification Applications"
+  },
+  {
+    "id": "verifications.subtitle",
+    "defaultMessage": "List of applications"
+  },
+  {
+    "id": "account",
+    "defaultMessage": "Account"
+  }
+]

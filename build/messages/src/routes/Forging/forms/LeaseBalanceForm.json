@@ -1,0 +1,26 @@
+[
+  {
+    "id": "forging.lease_period_invalid",
+    "defaultMessage": "The lease period must be between 1440 and 65535 blocks."
+  },
+  {
+    "id": "forging.period_help",
+    "defaultMessage": "The lease period in amount of blocks. Must be between 1440 and 65535 blocks."
+  },
+  {
+    "id": "forging.fee",
+    "defaultMessage": "Fee in {tokenName}"
+  },
+  {
+    "id": "forging.minimum_fee_error_description",
+    "defaultMessage": "The minimum fee is {minimumFee} {tokenName}"
+  },
+  {
+    "id": "forging.advanced_options",
+    "defaultMessage": "Advanced options"
+  },
+  {
+    "id": "forging.lease_out",
+    "defaultMessage": "You can lease out"
+  }
+]

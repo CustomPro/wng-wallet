@@ -1,0 +1,46 @@
+[
+  {
+    "id": "close",
+    "defaultMessage": "Close"
+  },
+  {
+    "id": "cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "confirm_order_amount",
+    "defaultMessage": "Please confirm that you want to {type} {quantity} {token} for {total} {asset}"
+  },
+  {
+    "id": "confirm_order_buy_amount",
+    "defaultMessage": "Please confirm that you want to buy {quantity} {token} for {total} {asset}"
+  },
+  {
+    "id": "confirm_order_sell_amount",
+    "defaultMessage": "Please confirm that you want to sell {quantity} {token} for {total} {asset}"
+  },
+  {
+    "id": "confirm_order",
+    "defaultMessage": "Confirm order"
+  },
+  {
+    "id": "orderform.next",
+    "defaultMessage": "Next"
+  },
+  {
+    "id": "order_success",
+    "defaultMessage": "Your order has been successfully made"
+  },
+  {
+    "id": "order_error",
+    "defaultMessage": "Your order could not be made."
+  },
+  {
+    "id": "order_error_description",
+    "defaultMessage": "The server produced the following error description: {errorDescription}, error code: {errorCode}"
+  },
+  {
+    "id": "orderform.confirm_order_fee",
+    "defaultMessage": "Please note that this transaction has a fee of {fee} {token}"
+  }
+]

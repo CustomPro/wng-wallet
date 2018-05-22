@@ -1,0 +1,18 @@
+[
+  {
+    "id": "register",
+    "defaultMessage": "Register"
+  },
+  {
+    "id": "register_subtitle",
+    "defaultMessage": "Register now"
+  },
+  {
+    "id": "screenshot_help",
+    "defaultMessage": "Consider taking a <a href=\"http://www.howtogeek.com/205375/how-to-take-screenshots-on-almost-any-device/\" target=\"_blank\">screenshot</a> of your registration screen before submitting your data."
+  },
+  {
+    "id": "username_email_exists",
+    "defaultMessage": "This username or email already exists and cannot be used."
+  }
+]

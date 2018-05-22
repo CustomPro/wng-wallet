@@ -1,0 +1,6 @@
+[
+  {
+    "id": "user_ask_orders.confirm_cancel_order",
+    "defaultMessage": "Are you sure you want to cancel this order?"
+  }
+]

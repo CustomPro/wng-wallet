@@ -1,0 +1,18 @@
+[
+  {
+    "id": "cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "update_now",
+    "defaultMessage": "Update now"
+  },
+  {
+    "id": "new_version_available",
+    "defaultMessage": "New version available"
+  },
+  {
+    "id": "update_wallet_help",
+    "defaultMessage": "Updating will refresh this page"
+  }
+]

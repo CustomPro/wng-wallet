@@ -1,0 +1,34 @@
+[
+  {
+    "id": "transfer_success",
+    "defaultMessage": "Your transfer has been successfully made"
+  },
+  {
+    "id": "quantity",
+    "defaultMessage": "Quantity {asset}"
+  },
+  {
+    "id": "withdrawbalance.price",
+    "defaultMessage": "Price"
+  },
+  {
+    "id": "withdrawbalance.price_hint",
+    "defaultMessage": "Price of {asset}"
+  },
+  {
+    "id": "confirm_send",
+    "defaultMessage": "Confirm send"
+  },
+  {
+    "id": "clear_values",
+    "defaultMessage": "Clear values"
+  },
+  {
+    "id": "recipient_error",
+    "defaultMessage": "Please enter a recipient"
+  },
+  {
+    "id": "number_error",
+    "defaultMessage": "Please enter a number"
+  }
+]
