@@ -133,7 +133,7 @@
     "imports-loader": "^0.6.5",
     "intl": "^1.2.2",
     "ip": "^1.1.5",
-    "jquery": "^2.2.4",
+    "jquery": "^3.0.0",
     "json-loader": "^0.5.4",
     "koa": "^2.0.0-alpha.3",
     "koa-connect-history-api-fallback": "^0.3.0",
