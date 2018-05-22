@@ -1,0 +1,51 @@
+.Sidebar_AuthorizedUserDiv {
+  margin-bottom: 10px;
+}
+
+.Sidebar_AuthorizedUser {
+  background-color: green;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.Sidebar_UnauthorizedUser {
+  background-color: red;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.Sidebar_UnauthorizedUser a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.Sidebar_BalancesHeader {
+  margin: 16px;
+}
+
+.Sidebar_BalancesHeader__Divider {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.Sidebar_MoreBalances {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.Sidebar_ViewMoreBalances {
+  padding-top: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.Sidebar_BalancesList {
+  padding-top: 10px;
+}

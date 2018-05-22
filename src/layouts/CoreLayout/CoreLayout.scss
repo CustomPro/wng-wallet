@@ -1,0 +1,33 @@
+$blue: #2196F3;
+$blue_darker: #1976D2;
+$orange_darker: #c37a00;
+$orange_darkest: #985f00;
+$green_darker: #0293a6;
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: gray;
+}
+
+.mainContainer {
+  flex: 1 0 auto;
+  padding-top: 40px;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 992px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

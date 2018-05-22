@@ -1,0 +1,22 @@
+.AccountInformation_AuthorizedUser {
+  background-color: green;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.AccountInformation_UnauthorizedUser {
+  background-color: red;
+  font-size: 10px;
+  padding: 2px 5px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.AccountInformation_UnauthorizedUser a {
+  color: white;
+  text-decoration: none;
+}

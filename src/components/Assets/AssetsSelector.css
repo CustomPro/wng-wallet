@@ -1,0 +1,9 @@
+.AssetsSelector_Asset {
+  padding: 10px;
+}
+
+.AssetsSelector_Assets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

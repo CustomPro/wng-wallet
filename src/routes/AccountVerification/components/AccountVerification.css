@@ -1,0 +1,19 @@
+.AccountVerificationForm_Body__FieldrowSubmit {
+  text-align: right;
+  padding: 10px;
+}
+
+.AccountVerificationForm_Body__Submit,
+.AccountVerificationForm_Body__Clear {
+  display: inline-block;
+  padding: 3px;
+}
+
+.AccountVerificationForm_FileItem {
+  margin-bottom: 10px;
+}
+
+.AccountVerificationForm_FileValidation {
+  color: red;
+  font-size: 11px;
+}

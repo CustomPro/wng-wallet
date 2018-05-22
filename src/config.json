@@ -1,0 +1,57 @@
+{
+  "tokenName": "WNG",
+  "tokenDecimals": 8,
+  "minimumFee": 1e6,
+  "isLocalhost": false,
+  "apiUrl": "http://localhost:3001",
+  "nrsUrl": "https://sg.wang-coin.com",
+  "nrsSuffix": "dbn",
+  "forgingNodes": [
+    "https://sg.wang-coin.com"
+  ],
+  "android": {
+    "appPackage": "com.wang-coin.wallet",
+    "appName": "WNG Wallet",
+    "appDescription": "WNG Wallet",
+    "logo": true
+  },
+  "ios": {
+    "logo": true
+  },
+  "colors": {
+    "enabled": false
+  },
+  "exchange": {
+    "enabled": true,
+    "getAllAssets": false,
+    "assetId": "11940232824756986965"
+  },
+  "balances": {
+    "enabled": true,
+    "assetIds": [
+      "11940232824756986965"
+    ]
+  },
+  "deposit": {
+    "enabled": true,
+    "email": "deposits@wang-coin.com"
+  },
+  "withdraw": {
+    "enabled": true,
+    "email": "withdrawals@wang-coin.com"
+  },
+  "blocks": {
+    "enabled": true,
+    "showTransactions": true,
+    "pagination": true
+  },
+  "accountVerification": {
+    "enabled": true
+  },
+  "vouchers": {
+    "enabled": true
+  },
+  "search": {
+    "enabled": true
+  }
+}

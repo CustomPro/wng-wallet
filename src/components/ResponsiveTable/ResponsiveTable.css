@@ -1,0 +1,93 @@
+.ResponsiveTable_Container {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  overflow-x: auto;
+}
+
+.ResponsiveTable a:hover {
+  text-decoration: underline;
+}
+
+.ResponsiveTable_Table,
+.ResponsiveTable_Rows {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 13px;
+}
+.ResponsiveTable_Row,
+.ResponsiveTable_Headers {
+  display: table-row;
+}
+.ResponsiveTable_Headers {
+  border-bottom: 1px solid #000;
+}
+.ResponsiveTable_Cell,
+.ResponsiveTable_Header {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+.ResponsiveTable_Cell {
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 48px;
+  text-align: left;
+  font-size: 13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: inherit;
+  vertical-align: top;
+}
+.ResponsiveTable_Header {
+  font-weight: normal;
+  font-size: 12px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 56px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #000;
+  position: relative;
+  background-color: inherit;
+}
+.ResponsiveTable_ListItem {
+  color: #000;
+  font-size: 13px;
+  width: 100%;
+  clear: both;
+  padding: 10px;
+  border-bottom: 1px solid #000;
+}
+.ResponsiveTable_ListItem_Item {
+  padding: 3px;
+}
+.ResponsiveTable_ListLabel,
+.ResponsiveTable_ListValue {
+  display: inline-block;
+}
+.ResponsiveTable_ListLabel {
+  font-weight: bold;
+  vertical-align: top;
+}
+.ResponsiveTable_ListValue {
+  margin-left: 5px;
+}
+.ResponsiveTable_ListLabel:after {
+  content: ': ';
+}
+.ResponsiveTable_Footer {
+  text-align: right;
+}
+.ResponsiveTable_EmptyRows {
+  padding: 30px 20px;
+}
+.ResponsiveTable_Autorenew {
+  float: right;
+  cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.fieldrow {
+  display: block
+}
+.message {
+  padding: 15px;
+  font-size: 12px;
+  border: 1px solid #d7d7d7;
+  margin: 10px;
+}
+
+.DepositBalanceForm_Body__Fieldrow,
+.DepositBalanceForm_Body__FieldrowSubmit {
+  display: block;
+  width: 100%;
+}
+
+.DepositBalanceForm_Body__Field {
+  width: 100%;
+  color: white;
+}
+
+.DepositBalanceForm_Body__Message {
+  padding: 15px;
+  font-size: 12px;
+  border: 1px solid #d7d7d7;
+  margin: 10px;
+}
+
+.DepositBalanceForm_Body__FieldrowSubmit {
+  text-align: right;
+  padding: 10px;
+}
+
+.DepositBalanceForm_Body__Submit,
+.DepositBalanceForm_Body__Clear {
+  display: inline-block;
+  padding: 3px;
+}

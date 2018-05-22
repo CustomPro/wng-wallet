@@ -1,0 +1,63 @@
+:global {
+  @import 'base';
+  @import 'vendor/normalize';
+
+  // Some best-practice CSS that's useful for most apps
+  // Just remove them if they're not what you want
+  html {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:none;
+    background-attachment:fixed;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+  }
+
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  .hidden-xs {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .hidden-sm {
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  .container-fluid {
+    flex: 1 0 auto;
+    width: 100%;
+    @media screen and (max-width: 992px) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+
+  #root {
+    @media screen and (min-width: 993px) {
+      padding-left: 180px;
+    }
+  }
+}

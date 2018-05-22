@@ -1,0 +1,84 @@
+.Exchange_Widget {
+  margin-bottom: 10px;
+}
+
+.AssetInformation {
+  background-color: #607d8b !important;
+  color: white !important;
+}
+
+.AssetInformation_Header {
+  background-color: #455a64;
+  color: white !important;
+}
+
+.AssetInformation_Body {
+  text-align: center;
+}
+
+.AssetInformation_Body__Number {
+    display: inline-block;
+    font-size: 45px;
+    font-weight: lighter;;
+}
+
+.AssetInformation_Body__Description {
+    display: inline-block;
+    font-size: 45px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.AssetInformation_Body__Metadata {
+  text-align: right;
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.AssetInformation_Selector {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.OrderForm_Body__Fieldrow,
+.OrderForm_Body__FieldrowSubmit {
+  display: block;
+  width: 100%;
+}
+
+.OrderForm_Body__Field {
+  width: 100%;
+}
+
+.OrderForm_Body__Message {
+  padding: 15px;
+  font-size: 12px;
+  border: 1px solid #d7d7d7;
+  margin: 10px;
+}
+
+.OrderForm_Body__BalanceText {
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.OrderForm_Body__CurrencyBalance,
+.OrderForm_Body__AssetBalance {
+  font-size: 45px;
+  font-weight: lighter;
+}
+
+.OrderForm_Body__BalanceName {
+  font-weight: bold;
+}
+
+.OrderForm_Body__FieldrowSubmit {
+  text-align: right;
+  padding: 10px;
+}
+
+.OrderForm_Body__Submit,
+.OrderForm_Body__Clear {
+  display: inline-block;
+  padding: 3px;
+}

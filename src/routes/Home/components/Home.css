@@ -1,0 +1,13 @@
+.Home_Widget {
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.TransactionsTable_Header {
+  background-color: #c37a00 !important;
+  color: white !important;
+}
+
+.Home_CopySuccess {
+  font-size: 10px;
+}
