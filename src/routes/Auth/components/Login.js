@@ -64,6 +64,7 @@ export class Login extends React.Component {
       loginError,
       registerSuccess,
       connectionError,
+      loginStep,
       intl: {
         formatMessage
       }
@@ -111,7 +112,7 @@ export class Login extends React.Component {
                 {registerSuccess && <div>
                   {renderFormattedMessage(messages.successfully_registered)}
                 </div>}
-                <LoginFormContainer isAdmin={isAdmin} />
+                <LoginFormContainer isAdmin={isAdmin} loginStep={loginStep}/>
               </CardText>
             </Card>
           </Col>
@@ -129,7 +130,8 @@ Login.propTypes = {
   intl: PropTypes.object.isRequired,
   loginError: PropTypes.string.isRequired,
   registerSuccess: PropTypes.bool.isRequired,
-  connectionError: PropTypes.bool.isRequired
+  connectionError: PropTypes.bool.isRequired,
+  loginStep: PropTypes.number.isRequired
 }
 
 export default Login

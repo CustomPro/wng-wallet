@@ -79,10 +79,15 @@ export class LoginForm extends React.Component {
       secretPhraseLogin: false,
       passwordFieldType: 'password',
       secretPhraseFieldType: 'password',
+      step: 1,
       file: null
     }
   }
-
+ componentWillReceiveProps = (nextProps) => {
+    this.setState({
+          step: nextProps.registerStep
+    })
+  }
   _toggleSecretPhraseLogin = () => {
     this.setState({
       secretPhraseLogin: !this.state.secretPhraseLogin
@@ -132,6 +137,13 @@ export class LoginForm extends React.Component {
     login(data)
   }
 
+  handleMessageSubmit = (data) => {
+    const {isAdmin, verifyMessage } = this.props
+    data.isAdmin = isAdmin
+    data.secretPhraseLogin = secretPhraseLogin
+    verifyMessage(data)
+  }
+
   handleViewPassword = () => {
     if (this.state.passwordFieldType === 'password') {
       this.setState({ passwordFieldType: 'text' })
@@ -148,7 +160,23 @@ export class LoginForm extends React.Component {
     }
   }
 
-  render () {
+  setStepTwo = (e) => {
+    e.preventDefault()
+
+    this.setState({
+      step: 2
+    })
+  }
+
+  goBack = (e) => {
+    e.preventDefault()
+
+    this.setState({
+      step: this.state.step - 1
+    })
+  }
+
+  renderStepOne = () => {
     const {
       importBackup,
       handleSubmit,
@@ -158,7 +186,7 @@ export class LoginForm extends React.Component {
     const { secretPhraseLogin } = this.state
    
     return (
-      <form onSubmit={handleSubmit(this.handleSubmit)}>
+      <form onSubmit={handleSubmit(this.handleMessageSubmit)}>
         {secretPhraseLogin
           ? <div>
             <Field
@@ -241,6 +269,53 @@ export class LoginForm extends React.Component {
         </div>
       </form>
     )
+  }
+
+  renderStepTwo = () => {
+    const {
+      handleSubmit,
+      invalid
+    } = this.props
+
+    return (
+      <form onSubmit={handleSubmit(this.handleSubmit)}>
+        <strong>{renderFormattedMessage(messages.verification_help)}</strong>
+        <br />
+        <Field
+          name='code'
+          component={TextField}
+          hintText={renderFormattedMessage(messages.verification_code)}
+          floatingLabelText={renderFormattedMessage(messages.verification_code)}
+          fullWidth />
+        <br />
+        <div className={style.submitContainer}>
+          <div className={style.submitContainer_button}>
+            <RaisedButton
+              type='submit'
+              primary
+              label={renderFormattedMessage(messages.next_step)}
+              disabled={invalid} />
+            <RaisedButton
+              secondary
+              label={renderFormattedMessage(messages.go_back)}
+              onClick={this.goBack}
+              style={{ marginLeft: 10 }}
+              />
+          </div>
+        </div>
+      </form>
+    )
+  }
+
+  render () {
+
+    const { step } = this.state
+
+    if (step === 1) {
+      return this.renderStepOne()
+    } 
+
+    return this.renderStepThree()
   }
 }
 

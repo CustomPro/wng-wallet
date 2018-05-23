@@ -17,7 +17,8 @@ const mapStateToProps = (state) => ({
   registerSuccess: state.auth.registerSuccess,
   loginError: state.auth.loginError,
   connectionError: state.site.connectionError,
-  qrDialogIsOpen: state.qrreader.qrDialogIsOpen
+  qrDialogIsOpen: state.qrreader.qrDialogIsOpen,
+  loginStep: state.auth.loginStep
 })
 
 export default connect(

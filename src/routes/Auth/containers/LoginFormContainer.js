@@ -3,7 +3,8 @@ import { injectIntl } from 'react-intl'
 import {
   login,
   toggleImportBackup,
-  setBackupFile
+  setBackupFile,
+  verifyMessage
 } from '../modules/Auth'
 
 import LoginForm from '../forms/LoginForm'
@@ -11,7 +12,8 @@ import LoginForm from '../forms/LoginForm'
 const mapActionCreators = {
   login,
   toggleImportBackup,
-  setBackupFile
+  setBackupFile,
+  verifyMessage
 }
 
 const mapStateToProps = (state) => ({

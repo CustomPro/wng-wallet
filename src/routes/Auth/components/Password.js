@@ -17,7 +17,7 @@ const messages = defineMessages({
   },
   changepassword_subtitle: {
     id: 'changepassword_subtitle',
-    defaultMessage: 'Chagne password now'
+    defaultMessage: 'Change password now'
   },
   invalid_username_email: {
     id: 'invalild_username_email',

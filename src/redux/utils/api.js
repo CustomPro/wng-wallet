@@ -22,7 +22,7 @@ function _parseResult (result, textStatus, jqXHR) {
   if (typeof result === 'string') {
     try {
       result = JSON.parse(result)
-      console.log(result)
+      //console.log(result)
     } catch (e) {
       return e
     }

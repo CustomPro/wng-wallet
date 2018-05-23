@@ -39,20 +39,9 @@ export class Register extends React.Component {
   render () {
     const {
       registerError,
-      registerStep,
-      verifyError
+      registerStep
     } = this.props
-   /* this.state = {
-      step: 1
-    }
-     componentWillReceiveProps = (nextProps) => {
-        if(this.props.registerStep && this.props.registerStep != nextProps.registerStep){
-            this.setState({
-              step: 
-            })
-        }
-     }*/
-    console.log(registerStep)
+
     return (
       <PageTitle pageName='register'>
         <Row>
@@ -64,9 +53,6 @@ export class Register extends React.Component {
               <CardText>
                 {registerError && <div style={{ color: 'red' }}>
                   {renderFormattedMessage(messages[registerError])}
-                </div>}
-                 {verifyError && <div style={{ color: 'red' }}>
-                  {renderFormattedMessage(messages[verifyError])}
                 </div>}
                 <RegisterFormContainer registerStep={registerStep}/>
               </CardText>
@@ -81,8 +67,7 @@ export class Register extends React.Component {
 Register.propTypes = {
   intl: PropTypes.object.isRequired,
   registerError: PropTypes.string.isRequired,
-  registerStep: PropTypes.number.isRequired,
-  verifyError: PropTypes.string.isRequired
+  registerStep: PropTypes.number.isRequired
 }
 
 export default Register
