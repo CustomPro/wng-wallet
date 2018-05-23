@@ -1,13 +1,14 @@
 import { connect } from 'react-redux'
 import { injectIntl } from 'react-intl'
-import { register, setPasswordStrength, verifyCode } from '../modules/Auth'
+import { register, setPasswordStrength, verifyCode, verifyEmail } from '../modules/Auth'
 
 import RegisterForm from '../forms/RegisterForm'
 
 const mapActionCreators = {
   register,
   setPasswordStrength,
-  verifyCode
+  verifyCode,
+  verifyEmail
 }
 
 const mapStateToProps = (state) => ({

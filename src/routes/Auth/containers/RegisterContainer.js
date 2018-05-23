@@ -5,8 +5,7 @@ import Register from '../components/Register'
 
 const mapStateToProps = (state) => ({
   registerError: state.auth.registerError,
-  registerStep: state.auth.registerStep,
-  verifyError: state.auth.verifyError
+  registerStep: state.auth.registerStep
 })
 
 export default connect(

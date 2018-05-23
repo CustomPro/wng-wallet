@@ -19,6 +19,7 @@ import { connectionError } from 'redux/modules/site'
 import { get, post, sendRequest, postFormData } from 'redux/utils/api'
 import { tokenName } from 'config.json'
 
+
 export const LOGIN = 'LOGIN'
 export const login = (data) => {
   return (dispatch, getState) => {
@@ -136,6 +137,8 @@ export const loginError = createAction(LOGIN_ERROR)
 export const REGISTER = 'REGISTER'
 export const register = (data) => {
   return (dispatch, getState) => {
+    console.log("this is register")
+    console.log("data")
     dispatch(createAction(REGISTER)())
     const { isLocalhost } = getState().site
     let secretPhrase = data.secretPhrase
@@ -198,6 +201,61 @@ export const getAccount = (account) => {
     })
   }
 }
+
+export const VERIFY_MESSAGE_SUCCESS = 'VERIFY_MESSAGE_SUCCESS'
+export const verifyMessageSuccess = createAction(VERIFY_MESSAGE_SUCCESS)
+
+export const VERIFY_MESSAGE_ERROR = 'VERIFY_MESSAGE_ERROR'
+export const verifyMessageError = createAction(VERIFY_MESSAGE_ERROR)
+
+export const VERIFY_MESSAGE = 'VERIFY_MESSAGE'
+export const verifyMessage = (data) => {
+
+  return (dispatch, getState) => {
+    dispatch(createAction(VERIFY_MESSAGE)())
+    post('verifyMessage', {
+        username:data.username.toLowerCase(),
+        email: data.email.toLowerCase()
+      }).then((result) => {
+        console.log(result)
+        if(result.code == 1){
+          dispatch(verifyMessageSuccess())
+        }
+        else {
+          dispatch(verifyMessageError('incorrect_verify_code'))
+        }
+      }).fail((jqXHR, textStatus, err) => {
+        dispatch(verifyMessageError('incorrect_verify_code'))
+      })
+  }
+}
+export const VERIFY_EMAIL_SUCCESS = 'VERIFY_EMAIL_SUCCESS'
+export const verifyEmailSuccess = createAction(VERIFY_EMAIL_SUCCESS)
+
+export const VERIFY_EMAIL_ERROR = 'VERIFY_EMAIL_ERROR'
+export const verifyEmailError = createAction(VERIFY_EMAIL_ERROR)
+
+export const VERIFY_EMAIL = 'VERIFY_EMAIL'
+export const verifyEmail = (data) => {
+
+  return (dispatch, getState) => {
+    dispatch(createAction(VERIFY_EMAIL)())
+    post('verifyEmail', {
+        email: data.email.toLowerCase()
+      }).then((result) => {
+        console.log(result)
+        if(result.code == 1){
+          dispatch(verifyEmailSuccess())
+        }
+        else {
+          dispatch(verifyEmailError('username_email_exists'))
+        }
+      }).fail((jqXHR, textStatus, err) => {
+        dispatch(verifyEmailError('username_email_exists'))
+      })
+  }
+}
+
 export const VERIFY_CODE_SUCCESS = 'VERIFY_CODE_SUCCESS'
 export const verifyCodeSuccess = createAction(VERIFY_CODE_SUCCESS)
 
@@ -206,13 +264,28 @@ export const verifyCodeError = createAction(VERIFY_CODE_ERROR)
 
 export const VERIFY_CODE = 'VERIFY_CODE'
 export const verifyCode = (data) => {
-  console.log('this is requested')
+  console.log('this is verifyCode')
+  console.log(data)
   return (dispatch, getState) => {
-    //dispatch(verifyCodeError('incorrect_verify_code'))
-    dispatch(verifyCodeSuccess())
-    return dispatch(push('/register'))
+    dispatch(createAction(VERIFY_CODE)())
+    post('verifyCode', {
+        email: data.email.toLowerCase(),
+        code: data.code
+      }).then((result) => {
+        console.log(result)
+        if(result.code == 1){
+          dispatch(verifyCodeSuccess())
+        }
+        else {
+          dispatch(verifyCodeError('incorrect_verify_code'))
+        }
+      }).fail((jqXHR, textStatus, err) => {
+        dispatch(verifyEmailError('incorrect_verify_code'))
+      })
   }
 }
+
+
 
 export const CHANGEPASSWORD_SUCCESS = 'CHANGEPASSWORD_SUCCESS'
 export const changePasswordSuccess = createAction(CHANGEPASSWORD_SUCCESS)
@@ -382,11 +455,13 @@ export const initialState = {
   isRetrievingAccount: false,
   isChangingPassword: false,
   isVerifyingCode: false,
+  isVerifyingEmail: false,
+  isVerifyingMessage: false,
   loginError: '',
   registerSuccess: false,
   registerError: '',
-  verifyError: '',
   registerStep: 1,
+  loginStep: 1,
   showReceiveModal: false,
   account: {
     encryptedSecretPhrase: '',
@@ -495,10 +570,59 @@ export default handleActions({
     }
   },
 
+[VERIFY_MESSAGE]: state => {
+    return {
+      ...state,
+      loginError: '',
+      isVerifyingMessage: true,
+      registerStep: 1
+    }
+  },
+  [VERIFY_MESSAGE_SUCCESS]: state => {
+    return {
+      ...state,
+      loginError: '',
+      isVerifyingMessage: false,
+      loginStep: 2,
+
+    }
+  },
+  [VERIFY_MESSAGE_ERROR]: (state, {payload}) => {
+    return {
+      ...state,
+      isVerifyingMessage: false,
+      loginError: payload
+    }
+  },
+
+[VERIFY_EMAIL]: state => {
+    return {
+      ...state,
+      registerError: '',
+      isVerifyingEmail: true,
+      registerStep: 1
+    }
+  },
+  [VERIFY_EMAIL_SUCCESS]: state => {
+    return {
+      ...state,
+      registerError: '',
+      isVerifyingEmail: false,
+      registerStep: 2,
+
+    }
+  },
+  [VERIFY_EMAIL_ERROR]: (state, {payload}) => {
+    return {
+      ...state,
+      isVerifyingEmail: false,
+      registerError: payload
+    }
+  },
   [VERIFY_CODE]: state => {
     return {
       ...state,
-      verifyError: '',
+      registerError: '',
       isVerifyingCode: true,
       registerStep: 2
     }
@@ -506,6 +630,7 @@ export default handleActions({
   [VERIFY_CODE_SUCCESS]: state => {
     return {
       ...state,
+      registerError: '',
       isVerifyingCode: false,
       registerStep: 3
     }
@@ -513,8 +638,8 @@ export default handleActions({
   [VERIFY_CODE_ERROR]: (state, {payload}) => {
     return {
       ...state,
-      isChangingPassword: false,
-      verifyError: payload
+      isVerifyingCode: false,
+      registerError: payload
     }
   },
 

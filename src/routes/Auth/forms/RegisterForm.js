@@ -174,8 +174,7 @@ export class RegisterForm extends React.Component {
       try {
         const { setPasswordStrength } = this.props
         const { value } = nextProps.fields.password
-        
-        console.log(this.props)
+
         setPasswordStrength(zxcvbn(value).score) // eslint-disable-line
       } catch (e) {
         console.log(e)
@@ -230,6 +229,11 @@ export class RegisterForm extends React.Component {
     register(data)
   }
 
+  handleEmailSubmit = (data) => {
+    const { verifyEmail } = this.props
+    verifyEmail(data)
+  }
+
   handleCodeSubmit = (data) => {
     const { verifyCode } = this.props
     verifyCode(data)
@@ -260,20 +264,6 @@ export class RegisterForm extends React.Component {
     }
   }
 
-  setStepTwo = (e) => {
-    e.preventDefault()
-
-    this.setState({
-      step: 2
-    })
-  }
-  setStepThree = (e) => {
-    e.preventDefault()
-
-    this.setState({
-      step: 3
-    })
-   }
   goBack = (e) => {
     e.preventDefault()
 
@@ -284,6 +274,7 @@ export class RegisterForm extends React.Component {
 
   renderStepOne = () => {
     const {
+      handleSubmit,
       passwordStrength,
       invalid
     } = this.props
@@ -305,7 +296,7 @@ export class RegisterForm extends React.Component {
     }
 
     return (
-      <form onSubmit={this.setStepTwo}>
+      <form onSubmit={handleSubmit(this.handleEmailSubmit)}>
         <strong>{renderFormattedMessage(messages.registration_help)}</strong>
         <br />
         <Field
@@ -504,7 +495,6 @@ export class RegisterForm extends React.Component {
   render () {
 
     const { step } = this.state
-    console.log(step)
 
     if (step === 1) {
       return this.renderStepOne()
