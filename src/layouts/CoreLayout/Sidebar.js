@@ -459,6 +459,7 @@ class Sidebar extends React.Component {
       isAdmin,
       isBigScreen,
       isLoggedIn,
+      isChecked2FA,
       assetBalances,
       selectedAssets,
       isAuthorized
@@ -468,10 +469,10 @@ class Sidebar extends React.Component {
       formatNumber, selectedAssets, assetBalances, balance, isAuthorized)
     let menu
     let adminMenu
-    if (isLoggedIn) {
+    if (isLoggedIn && isChecked2FA) {
       menu = this.renderLoggedIn()
     }
-    if (!isLoggedIn) {
+    if (!isChecked2FA) {
       menu = this.renderLoggedOut()
     }
     if (isAdmin) {
@@ -484,8 +485,8 @@ class Sidebar extends React.Component {
           docked={isBigScreen}
           open={open || isBigScreen}
           onRequestChange={this._onRequestChange}>
-          {isLoggedIn && balanceDiv}
-          {isLoggedIn && <Divider style={{ marginTop: 8, marginBottom: 8 }} />}
+          {isChecked2FA && balanceDiv}
+          {isChecked2FA && <Divider style={{ marginTop: 8, marginBottom: 8 }} />}
           {adminMenu}
           {menu}
         </Drawer>
@@ -514,6 +515,7 @@ Sidebar.propTypes = {
   isAdmin: PropTypes.bool.isRequired,
   isAuthorized: PropTypes.bool.isRequired,
   isLoggedIn: PropTypes.bool.isRequired,
+  isChecked2FA: PropTypes.bool.isRequired,
   closeSidebar: PropTypes.func.isRequired,
   assetBalances: PropTypes.array,
   selectedAssets: PropTypes.array,
@@ -534,6 +536,7 @@ export default injectIntl(connect((state) => {
   const moreBalancesSectionOpen = state.site.moreBalancesSectionOpen
   const { isAdmin } = state.auth
   const isLoggedIn = !!state.auth.account.secretPhrase
+  const isChecked2FA = !!state.auth.account.isChecked2FA
   const isBigScreen = state.browser.greaterThan.medium
   const balance = convertDQTToDBN(state.auth.account.unconfirmedBalanceDQT)
   const { selectedAssets } = state.balances
@@ -561,6 +564,7 @@ export default injectIntl(connect((state) => {
     moreBalancesSectionOpen,
     isAdmin,
     isLoggedIn,
+    isChecked2FA,
     isBigScreen,
     selectedAssets,
     assetBalances,
