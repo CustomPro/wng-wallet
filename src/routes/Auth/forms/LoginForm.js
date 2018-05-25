@@ -51,7 +51,19 @@ const messages = defineMessages({
   choose_file: {
     id: 'choose_file',
     defaultMessage: 'Choose file'
-  }
+  },
+  next_step: {
+    id: 'next_step',
+    defaultMessage: 'Next Step'
+  },
+  resend_email: {
+    id: 'resend_email',
+    defaultMessage: 'Resend'
+  },
+  verification_help: {
+     id: 'verification_help',
+      defaultMessage: 'Please entre verification code from your email.'
+    }
 })
 
 import style from './LoginForm.scss'
@@ -85,7 +97,7 @@ export class LoginForm extends React.Component {
   }
  componentWillReceiveProps = (nextProps) => {
     this.setState({
-          step: nextProps.registerStep
+          step: nextProps.loginStep
     })
   }
   _toggleSecretPhraseLogin = () => {
@@ -130,6 +142,9 @@ export class LoginForm extends React.Component {
   }
 
   handleSubmit = (data) => {
+    // this.setState({
+    //   step: 2
+    // })
     const { isAdmin, login } = this.props
     const { secretPhraseLogin } = this.state
     data.isAdmin = isAdmin
@@ -139,6 +154,7 @@ export class LoginForm extends React.Component {
 
   handleMessageSubmit = (data) => {
     const {isAdmin, verifyMessage } = this.props
+    const { secretPhraseLogin } = this.state
     data.isAdmin = isAdmin
     data.secretPhraseLogin = secretPhraseLogin
     verifyMessage(data)
@@ -160,15 +176,7 @@ export class LoginForm extends React.Component {
     }
   }
 
-  setStepTwo = (e) => {
-    e.preventDefault()
-
-    this.setState({
-      step: 2
-    })
-  }
-
-  goBack = (e) => {
+  reSend = (e) => {
     e.preventDefault()
 
     this.setState({
@@ -186,7 +194,7 @@ export class LoginForm extends React.Component {
     const { secretPhraseLogin } = this.state
    
     return (
-      <form onSubmit={handleSubmit(this.handleMessageSubmit)}>
+      <form onSubmit={handleSubmit(this.handleSubmit)}>
         {secretPhraseLogin
           ? <div>
             <Field
@@ -278,7 +286,7 @@ export class LoginForm extends React.Component {
     } = this.props
 
     return (
-      <form onSubmit={handleSubmit(this.handleSubmit)}>
+      <form onSubmit={handleSubmit(this.handleMessageSubmit)}>
         <strong>{renderFormattedMessage(messages.verification_help)}</strong>
         <br />
         <Field
@@ -297,8 +305,8 @@ export class LoginForm extends React.Component {
               disabled={invalid} />
             <RaisedButton
               secondary
-              label={renderFormattedMessage(messages.go_back)}
-              onClick={this.goBack}
+              label={renderFormattedMessage(messages.resend_email)}
+              onClick={handleSubmit(this.handleSubmit)}
               style={{ marginLeft: 10 }}
               />
           </div>
@@ -311,11 +319,11 @@ export class LoginForm extends React.Component {
 
     const { step } = this.state
 
-    if (step === 1) {
-      return this.renderStepOne()
+    if (step === 2) {
+      return this.renderStepTwo()
     } 
 
-    return this.renderStepThree()
+    return this.renderStepOne()
   }
 }
 

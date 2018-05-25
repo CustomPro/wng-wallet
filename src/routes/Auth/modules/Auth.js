@@ -33,8 +33,7 @@ export const login = (data) => {
     }
     const handleDecryption = (encrypted) => {
       let decrypted = encrypted.secretPhrase
-      console.log('login')
-      console.log(encrypted)
+
       if (!decrypted) {
         decrypted = decrypt(encrypted, JSON.stringify({
           username: data.username.toLowerCase(),
@@ -42,7 +41,6 @@ export const login = (data) => {
           password: data.password
         }))
       }
-      console.log(decrypted)
       
       if (!decrypted) {
         return dispatch(loginError('could_not_decrypt'))
@@ -69,7 +67,7 @@ export const login = (data) => {
         dispatch(getAccount(accountData.accountRS))
         dispatch(getAccountProperties(accountData.accountRS))
         dispatch(getTransactions(accountData.accountRS))
-        dispatch(push(redirect))
+        
       }
       if (data.isAdmin) {
         return isAdmin(decrypted)
@@ -90,30 +88,37 @@ export const login = (data) => {
     }
 
     if (data.secretPhraseLogin) {
-      return handleDecryption(data)
-    }
-
-    if (importBackup && backupFile) {
+      const RS = getAccountRSFromSecretPhrase(data.secretPhrase, tokenName)
+      get('accountRS', {
+        RS: RS
+      }).then((result, textStatus, jqXHR) => {
+        if (result && result.errorDescription) {
+          return $.Deferred().reject(jqXHR, textStatus, result.errorDescription)
+        }
+        const encrypted = result.account.secretPhrase
+        handleDecryption(data)
+      }).fail((jqXHR, textStatus, err) => {
+        return findLocalWallet(username)
+      })
+      
+    } else if (importBackup && backupFile) {
       return handleDecryption(backupFile)
-    }
-
-    if (isLocalhost) {
+    } else if (isLocalhost) {
       return findLocalWallet(username)
+    } else {
+      get('account', {
+        username,
+        email: data.email
+      }).then((result, textStatus, jqXHR) => {
+        if (result && result.errorDescription) {
+          return $.Deferred().reject(jqXHR, textStatus, result.errorDescription)
+        }
+        const encrypted = result.account.secretPhrase
+        handleDecryption(encrypted)
+      }).fail((jqXHR, textStatus, err) => {
+        return findLocalWallet(username)
+      })
     }
-   console.log(`username=${username}`)
-    get('account', {
-      username,
-      email: data.email
-    }).then((result, textStatus, jqXHR) => {
-      if (result && result.errorDescription) {
-        return $.Deferred().reject(jqXHR, textStatus, result.errorDescription)
-      }
-      const encrypted = result.account.secretPhrase
-      handleDecryption(encrypted)
-    }).fail((jqXHR, textStatus, err) => {
-     //console.log(err)
-      return findLocalWallet(username)
-    })
   }
 }
 
@@ -137,8 +142,7 @@ export const loginError = createAction(LOGIN_ERROR)
 export const REGISTER = 'REGISTER'
 export const register = (data) => {
   return (dispatch, getState) => {
-    console.log("this is register")
-    console.log("data")
+
     dispatch(createAction(REGISTER)())
     const { isLocalhost } = getState().site
     let secretPhrase = data.secretPhrase
@@ -213,19 +217,22 @@ export const verifyMessage = (data) => {
 
   return (dispatch, getState) => {
     dispatch(createAction(VERIFY_MESSAGE)())
+    const account = getState().auth.account
+    
+    let accountRS = account.accountRS
     post('verifyMessage', {
-        username:data.username.toLowerCase(),
-        email: data.email.toLowerCase()
+        accountRS,
+        code: data.code
       }).then((result) => {
-        console.log(result)
         if(result.code == 1){
           dispatch(verifyMessageSuccess())
+          dispatch(push('/'))
         }
         else {
-          dispatch(verifyMessageError('incorrect_verify_code'))
+          dispatch(verifyMessageError('incorrect_code'))
         }
       }).fail((jqXHR, textStatus, err) => {
-        dispatch(verifyMessageError('incorrect_verify_code'))
+        dispatch(verifyMessageError('incorrect_code'))
       })
   }
 }
@@ -470,7 +477,8 @@ export const initialState = {
     publicKey: '',
     unconfirmedBalanceDQT: 0,
     assetBalances: [],
-    properties: {}
+    properties: {},
+    isChecked2FA: false
   },
   username: '',
   importBackup: false,
@@ -500,13 +508,16 @@ export default handleActions({
     return {
       ...state,
       isLoggingIn: false,
+      loginError: '',
+      loginStep: 2,
       account: {
         ...state.account,
         encryptedSecretPhrase: payload.encryptedSecretPhrase,
         secretPhrase: payload.secretPhrase,
         accountRS: payload.accountRS,
         publicKey: payload.publicKey,
-        assetBalances: payload.assetBalances
+        assetBalances: payload.assetBalances,
+        isChecked2FA: false
       },
       isAdmin: payload.isAdmin
     }
@@ -574,16 +585,18 @@ export default handleActions({
     return {
       ...state,
       loginError: '',
-      isVerifyingMessage: true,
-      registerStep: 1
+      isVerifyingMessage: true
     }
   },
   [VERIFY_MESSAGE_SUCCESS]: state => {
     return {
       ...state,
       loginError: '',
-      isVerifyingMessage: false,
-      loginStep: 2,
+      account: {
+        ...state.account,
+        isChecked2FA: true
+      },
+      isVerifyingMessage: false
 
     }
   },
@@ -591,6 +604,11 @@ export default handleActions({
     return {
       ...state,
       isVerifyingMessage: false,
+      loginStep: 2,
+      account: {
+        ...state.account,
+        isChecked2FA: false
+      },
       loginError: payload
     }
   },

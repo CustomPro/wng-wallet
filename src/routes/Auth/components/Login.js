@@ -55,6 +55,10 @@ const messages = defineMessages({
   website_name: {
     id: 'website_name',
     defaultMessage: 'DBN Wallet'
+  },
+  incorrect_code:{
+    id: 'incorrect_code',
+    defaultMessage: 'The code is incorrect. Please check your email again'
   }
 })
 

@@ -230,11 +230,17 @@ export class RegisterForm extends React.Component {
   }
 
   handleEmailSubmit = (data) => {
+    this.setState({
+      step: 2
+    })
     const { verifyEmail } = this.props
     verifyEmail(data)
   }
 
   handleCodeSubmit = (data) => {
+    this.setState({
+      step: 3
+    })
     const { verifyCode } = this.props
     verifyCode(data)
   }
