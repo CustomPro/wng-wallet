@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react'
+import ReactDOM from 'react-dom'
+import QRCode from 'qrcode.react'
 import { Link } from 'react-router'
 import { reduxForm, Field, propTypes } from 'redux-form'
+
 import {
   Checkbox,
   RaisedButton,
@@ -13,6 +16,7 @@ import { TextField } from 'redux-form-material-ui'
 import { renderFormattedMessage } from 'redux/utils/intl'
 import { defineMessages } from 'react-intl'
 import ImageRemoveRedEye from 'material-ui/svg-icons/image/remove-red-eye'
+import randomwords from 'random-words'
 
 
 const messages = defineMessages({
@@ -121,6 +125,10 @@ const messages = defineMessages({
   verification_code: {
     id:'verification_code',
     defaultMessage: 'Verification code'
+  },
+  resend_email: {
+    id: 'resend_email',
+    defaultMessage: 'Resend'
   }
 })
 
@@ -166,9 +174,18 @@ export class RegisterForm extends React.Component {
   }
 
   componentWillReceiveProps = (nextProps) => {
+        
+
     this.setState({
-          step: nextProps.registerStep
+          step: nextProps.registerStep         
     })
+    if(nextProps.registerStep === 3){
+      const phrase = randomwords({exactly: 12, maxLength: 8, join: ' '})
+      this.setState({
+          secretPhrase: phrase
+      })
+    }
+
     if (this.props.fields && this.props.fields.password &&
       this.props.fields.password !== nextProps.fields.password) {
       try {
@@ -187,6 +204,15 @@ export class RegisterForm extends React.Component {
       secretPhraseOption: value,
       secretPhrase: null
     })
+    if(value == 'random'){
+      const phrase = randomwords({exactly: 12, maxLength: 8, join: ' '})
+      this.setState({
+        secretPhrase: phrase
+      })
+
+      
+    }
+
   }
 
   _onInputChange = (e, value) => {
@@ -230,17 +256,13 @@ export class RegisterForm extends React.Component {
   }
 
   handleEmailSubmit = (data) => {
-    this.setState({
-      step: 2
-    })
+
     const { verifyEmail } = this.props
     verifyEmail(data)
   }
 
   handleCodeSubmit = (data) => {
-    this.setState({
-      step: 3
-    })
+
     const { verifyCode } = this.props
     verifyCode(data)
   }
@@ -392,8 +414,8 @@ export class RegisterForm extends React.Component {
               disabled={invalid} />
             <RaisedButton
               secondary
-              label={renderFormattedMessage(messages.go_back)}
-              onClick={this.goBack}
+              label={renderFormattedMessage(messages.resend_email)}
+              onClick={handleSubmit(this.handleEmailSubmit)}
               style={{ marginLeft: 10 }}
               />
           </div>
@@ -432,17 +454,29 @@ export class RegisterForm extends React.Component {
           onChange={this._onOptionChange}
           defaultSelected={this.state.secretPhraseOption}>
           <RadioButton
+            selected='false'
             value='random'
             label={renderFormattedMessage(messages.random_secretPhrase)} />
           <RadioButton
+            selected='false'
             value='select_file'
             label={renderFormattedMessage(messages.select_file_secretPhrase)} />
           <RadioButton
+            selected='false'
             value='input_own'
             label={renderFormattedMessage(messages.input_own_secretPhrase)} />
         </RadioButtonGroup>
         <br />
-                 
+        {secretPhraseOption === 'random' && secretPhrase  && <div>
+          <h3>Secret phrase</h3>
+          <span>
+            {secretPhrase}
+          </span>
+          <h3>QR</h3>
+          <div>
+            <QRCode value={secretPhrase} />
+          </div>
+        </div>}      
         {secretPhraseOption === 'select_file' && <div>
           <FlatButton
             label={renderFormattedMessage(messages.choose_file)}
@@ -502,13 +536,13 @@ export class RegisterForm extends React.Component {
 
     const { step } = this.state
 
-    if (step === 1) {
-      return this.renderStepOne()
+    if (step === 3) {
+      return this.renderStepThree()
     } else if(step === 2) {
       return this.renderStepTwo()
     }
 
-    return this.renderStepThree()
+    return this.renderStepOne()
   }
 }
 
