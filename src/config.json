@@ -4,10 +4,10 @@
   "minimumFee": 1e6,
   "isLocalhost": false,
   "apiUrl": "http://localhost:3001",
-  "nrsUrl": "https://--",
+  "nrsUrl": "https://sg.wang-coin.com",
   "nrsSuffix": "dbn",
   "forgingNodes": [
-    "https://--"
+    "https://sg.wang-coin.com"
   ],
   "android": {
     "appPackage": "com.wang-coin.wallet",
@@ -24,12 +24,12 @@
   "exchange": {
     "enabled": true,
     "getAllAssets": false,
-    "assetId": "--"
+    "assetId": "11940232824756986965"
   },
   "balances": {
     "enabled": true,
     "assetIds": [
-      "--"
+      "11940232824756986965"
     ]
   },
   "deposit": {

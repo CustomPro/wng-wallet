@@ -20,7 +20,6 @@ export class Balances extends React.Component {
     this.props.getAssets()
   }
 
-
   render () {
     const {
       selectedAssets,
@@ -31,8 +30,7 @@ export class Balances extends React.Component {
       bitcoinAddress,
       intl
     } = this.props
-    console.log('bitcoinAddress')
-   console.log(this.props)
+
     return (
       <PageTitle pageName='balances'>
         <div className={style.Balances_Widget}>

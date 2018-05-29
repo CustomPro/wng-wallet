@@ -165,7 +165,7 @@ export class AccountVerificationForm extends React.Component {
     }
 
     const renderedForm = (
-      <form encType='multipart/form-data'
+      <form
         ref='accountVerification'
         onSubmit={handleSubmit(this.handleSubmit)}>
         <Field

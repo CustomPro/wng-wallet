@@ -17,16 +17,6 @@ export const postOrder = (assetId, secretPhrase, type, quantity, price, decimals
   if (type === 'sell') {
     url = 'placeAskOrder'
   }
-  /*const sendingdata = {
-    assetId: assetId,
-    secretPhrase: secretPhrase,
-    type: type,
-    quantity: quantity,
-    price: price,
-    decimals: decimals,
-    fee: fee
-  }
-  console.log(sendingdata)*/
   return (dispatch, getState) => {
     dispatch(createAction(POST_ORDER)())
     return sendRequest(url, {

@@ -48,11 +48,16 @@ export const login = (data) => {
       const accountRS = getAccountRSFromSecretPhrase(decrypted, tokenName)
       const publicKey = getPublicKey(decrypted)
       const encryptedSecretPhrase = data.secretPhrase || encrypted
+      let isChecked2FA = false
+      if(data.secretPhraseLogin){
+          isChecked2FA = true
+        }
       const accountData = {
         encryptedSecretPhrase,
         secretPhrase: decrypted,
         accountRS,
         publicKey,
+        isChecked2FA: isChecked2FA,
         isAdmin: data.isAdmin
       }
 
@@ -67,11 +72,14 @@ export const login = (data) => {
         dispatch(getAccount(accountData.accountRS))
         dispatch(getAccountProperties(accountData.accountRS))
         dispatch(getTransactions(accountData.accountRS))
+        if(data.secretPhraseLogin){
+          dispatch(push('/'))
+        }
         
       }
       if (data.isAdmin) {
         return isAdmin(decrypted)
-          .then(dispatchSuccess.bind(this, '/accounts'))
+          .then(dispatchSuccess())
           .fail(() => {
             dispatch(loginError('is_not_admin'))
           })
@@ -88,7 +96,7 @@ export const login = (data) => {
     }
 
     if (data.secretPhraseLogin) {
-      const RS = getAccountRSFromSecretPhrase(data.secretPhrase, tokenName)
+     /* const RS = getAccountRSFromSecretPhrase(data.secretPhrase, tokenName)
       get('accountRS', {
         RS: RS
       }).then((result, textStatus, jqXHR) => {
@@ -100,7 +108,8 @@ export const login = (data) => {
       }).fail((jqXHR, textStatus, err) => {
         return findLocalWallet(username)
       })
-      
+      */
+      return handleDecryption(data)
     } else if (importBackup && backupFile) {
       return handleDecryption(backupFile)
     } else if (isLocalhost) {
@@ -191,13 +200,15 @@ export const getAccount = (account) => {
     if (!account) {
       account = getState().auth.account.accountRS
     }
-
+    console.log("getAccount")
+    console.log(account)
     dispatch(createAction(GET_ACCOUNT)())
     sendRequest('getAccount', {
       account,
       includeEffectiveBalance: true,
       includeAssets: true
     }).then((result) => {
+      console.log(result)
       dispatch(getAccountSuccess(result))
     }).fail(() => {
       dispatch(push('/login'))
@@ -226,7 +237,11 @@ export const verifyMessage = (data) => {
       }).then((result) => {
         if(result.code == 1){
           dispatch(verifyMessageSuccess())
-          dispatch(push('/'))
+          if(data.isAdmin){
+            dispatch(push('/accounts'))
+          } else {
+            dispatch(push('/'))
+          }
         }
         else {
           dispatch(verifyMessageError('incorrect_code'))
@@ -517,7 +532,7 @@ export default handleActions({
         accountRS: payload.accountRS,
         publicKey: payload.publicKey,
         assetBalances: payload.assetBalances,
-        isChecked2FA: false
+        isChecked2FA: payload.isChecked2FA
       },
       isAdmin: payload.isAdmin
     }

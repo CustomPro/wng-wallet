@@ -288,7 +288,7 @@
   "submit": "Submit",
   "successfully_registered": "Successfully registered your account. You can now login.",
   "timestamp": "Timestamp",
-  "token_per_asset": "{token} per BTC",
+  "token_per_asset": "{token} per {asset}",
   "total": "Total",
   "total_amount": "Total Amount",
   "total_earned_forging": "Total earned from forging:",

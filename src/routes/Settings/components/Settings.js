@@ -11,7 +11,6 @@ import { saveAs } from 'file-saver'
 
 import PageTitle from 'components/PageTitle'
 import ChangeLocaleMenu from 'components/ChangeLocaleMenu'
-import ChangePasswordForm from 'components/ChangePasswordForm'
 import { renderFormattedMessage } from 'redux/utils/intl'
 
 const messages = defineMessages({
@@ -59,14 +58,6 @@ const messages = defineMessages({
   choose_language: {
     id: 'choose_language',
     defaultMessage: 'Choose language'
-  },
-  change_password: {
-    id: 'change_password',
-    defaultMessage: 'Changing Password'
-  },
-  change_password_explain: {
-    id: 'change_password_explain',
-    defaultMessage: 'If you want to change your password, please enter.'
   }
 })
 

@@ -11,12 +11,12 @@ import {
 export const GET_ASSETS = 'GET_ASSETS'
 export const getAssets = () => {
   return (dispatch, getState) => {
-    const { secretPhrase, accountRS } = getState().auth.account
     dispatch(createAction(GET_ASSETS)())
-    const params = '&accountRS='+accountRS+'&assets=' + balances.assetIds.join('&assets=')
-
+    const params = '&assets=' + balances.assetIds.join('&assets=')
+    console.log(params)
     sendRequest('getAssets', {}, true, params).then((result) => {
       if (result && result.assets) {
+        console.log(result)
         dispatch(getAssetsSuccess(result.assets))
       }
     })

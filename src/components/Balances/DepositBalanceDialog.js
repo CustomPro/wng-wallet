@@ -55,7 +55,6 @@ export class DepositBalanceDialog extends React.Component {
       isMobile,
       bitcoinAddress
     } = this.props
-    console.log(this.props)
     const { email } = deposit
     let name
     let dialogContentStyle

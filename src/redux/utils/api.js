@@ -22,7 +22,6 @@ function _parseResult (result, textStatus, jqXHR) {
   if (typeof result === 'string') {
     try {
       result = JSON.parse(result)
-      //console.log(result)
     } catch (e) {
       return e
     }
@@ -35,7 +34,7 @@ export function post (url, data) {
   return $.ajax({
     type: 'POST',
     url: `${apiUrl}/${url}?random=${Math.random()}`,
-    data
+    data: data
   }).then(_parseResult)
 }
 
@@ -81,7 +80,6 @@ export function sendRequest (requestType, data, async = true, params) {
   if (params) {
     url = `${nrsUrl}/${nrsSuffix.toLowerCase()}?requestType=${requestType}&${params}&random=${Math.random()}`
   }
-
   if (!data.secretPhrase) {
     return $.ajax({
       type: 'POST',
@@ -94,7 +92,7 @@ export function sendRequest (requestType, data, async = true, params) {
   // sign transactions locally
   let secretPhrase = data.secretPhrase
   delete data.secretPhrase
-
+  data.publicKey = getPublicKey(secretPhrase)
   return $.ajax({
     type: 'POST',
     url,
@@ -122,7 +120,6 @@ export function sendRequest (requestType, data, async = true, params) {
   .then((result) => {
     return sendRequest('broadcastTransaction', result)
   })
-  
 }
 
 export function getRequest (requestType, data) {
