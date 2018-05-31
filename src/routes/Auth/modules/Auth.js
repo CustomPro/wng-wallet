@@ -158,7 +158,7 @@ export const register = (data) => {
     const username = crypto.createHash('sha256').update(data.username).digest('hex')
     if (storeSecretPhrase(username, encrypted)) {
       if (isLocalhost) {
-        dispatch(registerSuccess(data))
+        dispatch(registerSuccess(data))        
         return dispatch(push('/login'))
       }
 
@@ -169,6 +169,13 @@ export const register = (data) => {
         accountRS: getAccountRSFromSecretPhrase(secretPhrase, tokenName)
       }).then((result) => {
         dispatch(registerSuccess(data))
+        /*let property
+        let publicKey = getPublicKey(secretPhrase)
+        property = {
+          name: username,
+          description: 'HelloWorld!'
+        }
+        dispatch(postSetAccountInfo(property))*/
         return dispatch(push('/login'))
       }).fail((jqXHR, textStatus, err) => {
         dispatch(registerError('username_email_exists'))
@@ -185,19 +192,41 @@ export const registerSuccess = createAction(REGISTER_SUCCESS)
 export const REGISTER_ERROR = 'REGISTER_ERROR'
 export const registerError = createAction(REGISTER_ERROR)
 
+/*export const POST_ACCOUNTINFO_SUCCESS = 'POST_ACCOUNTINFO_SUCCESS'
+export const postAccountInfoSuccess = createAction(POST_ACCOUNTINFO_SUCCESS)
+
+export const POST_SET_ACCOUNT_INFO = 'POST_SET_ACCOUNT_INFO'
+export const postSetAccountInfo = (property) => {
+  return (dispatch, getState) => {
+    //dispatch(createAction(POST_SET_ACCOUNT_INFO)())
+    const sendData = {}
+    const data = Object.assign(sendData, property)
+    console.log(property)
+    sendRequest(' setAccountInfo', property).then((result) => {
+      console.log('setAccountInfo Success')
+      console.log(result)
+    }).fail(() => {
+      console.log('setAccountInfo Fail')
+    })
+  }
+}
+*/
+
 export const GET_ACCOUNT = 'GET_ACCOUNT'
 export const getAccount = (account) => {
   return (dispatch, getState) => {
     if (!account) {
       account = getState().auth.account.accountRS
     }
-
+    //account = 'WNG-U87V-TREX-XY48-2TAW2'
     dispatch(createAction(GET_ACCOUNT)())
     sendRequest('getAccount', {
       account,
       includeEffectiveBalance: true,
       includeAssets: true
     }).then((result) => {
+      console.log('getAccount Result')
+      console.log(result)
       dispatch(getAccountSuccess(result))
     }).fail(() => {
       dispatch(push('/login'))
@@ -367,7 +396,8 @@ export const getAccountProperties = (account) => {
     sendRequest('getAccountProperties', {
       recipient: account
     }).then((result) => {
-      //console.log(result)
+      console.log("getAccountProperties Result")
+      console.log(result)
       let properties = {}
       if (result && result.properties) {
         if (result.properties.length > 0) {

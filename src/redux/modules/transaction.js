@@ -63,6 +63,9 @@ export const getTransactions = (account) => {
     }
 
     Promise.all(requests).then((result) => {
+       console.log("TRANSACTIONS Result")
+       console.log(result[0])
+       console.log(result[1])
       let transactions = []
       if (result[0] && result[0].transactions) {
         transactions = [

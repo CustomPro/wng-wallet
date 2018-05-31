@@ -96,6 +96,10 @@ export const postSetAccountProperty = (property) => {
     }
     const data = Object.assign(sendData, property)
     sendRequest('setAccountProperty', data).then((result) => {
+      console.log("set setAccountProperty success")
+      console.log(result)
+    }).fail( () => {
+      console.log("setAccountProperty Failed")
     })
   }
 }
