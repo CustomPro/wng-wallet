@@ -4,7 +4,7 @@
   "minimumFee": 1e6,
   "isLocalhost": false,
   "apiUrl": "http://localhost:3001",
-  "nrsUrl": "https://sg.wang-coin.com",
+  "nrsUrl": "http://localhost:7826",
   "nrsSuffix": "dbn",
   "forgingNodes": [
     "https://sg.wang-coin.com"

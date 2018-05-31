@@ -129,6 +129,10 @@ const messages = defineMessages({
   resend_email: {
     id: 'resend_email',
     defaultMessage: 'Resend'
+  },
+  go_print: {
+    id: 'go_print',
+    defaultMessage: 'Print'
   }
 })
 
@@ -171,6 +175,15 @@ export class RegisterForm extends React.Component {
     script.async = true
 
     document.body.appendChild(script)
+    const jspdfscript = document.createElement('script')
+    jspdfscript.src = 'https://unpkg.com/jspdf@latest/dist/jspdf.min.js'
+    jspdfscript.async = true
+    document.body.appendChild(jspdfscript)
+    const canvasscript = document.createElement('script')
+    canvasscript.src = 'https://html2canvas.hertzen.com/dist/html2canvas.min.js'
+    canvasscript.async = true
+    document.body.appendChild(canvasscript)
+
   }
 
   componentWillReceiveProps = (nextProps) => {
@@ -298,6 +311,17 @@ export class RegisterForm extends React.Component {
     this.setState({
       step: this.state.step - 1
     })
+  }
+
+  printQRCode = () => {
+    const input = document.getElementById('qrcodeDiv')
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png')
+      const pdf = new jsPDF()
+      pdf.addImage(imgData, 'JPEG', 30, 30)
+      pdf.save('QRCode.pdf')
+    })
+
   }
 
   renderStepOne = () => {
@@ -467,7 +491,7 @@ export class RegisterForm extends React.Component {
             label={renderFormattedMessage(messages.input_own_secretPhrase)} />
         </RadioButtonGroup>
         <br />
-        {secretPhraseOption === 'random' && secretPhrase  && <div>
+        {secretPhraseOption === 'random' && secretPhrase  && <div id='qrcodeDiv'>
           <h3>Secret phrase</h3>
           <span>
             {secretPhrase}
@@ -520,6 +544,12 @@ export class RegisterForm extends React.Component {
               onClick={this.goBack}
               style={{ marginLeft: 10 }}
               />
+            {secretPhraseOption === 'random' && secretPhrase  && <RaisedButton
+              secondary
+              label={renderFormattedMessage(messages.go_print)}
+              onClick={this.printQRCode}
+              style={{ marginLeft: 10 }}
+              />}
           </div>
           <div className={style.submitContainer_button}>
             <Link to='login'>
