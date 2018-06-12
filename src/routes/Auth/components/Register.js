@@ -13,11 +13,11 @@ import { renderFormattedMessage } from 'redux/utils/intl'
 const messages = defineMessages({
   register: {
     id: 'register',
-    defaultMessage: 'Register modified ss'
+    defaultMessage: 'Register'
   },
   register_subtitle: {
     id: 'register_subtitle',
-    defaultMessage: 'Register now--XX'
+    defaultMessage: 'Register now'
   },
   screenshot_help: {
     id: 'screenshot_help',
@@ -29,7 +29,7 @@ const messages = defineMessages({
     id: 'username_email_exists',
     defaultMessage: 'This username or email already exists and cannot be used.'
   },
-  incorrect_verify_code: {
+  incorrect_code: {
     id: 'incorrect_verify_code',
     defaultMessage: 'The verify code is incorrect. Please check your email again.'
   }

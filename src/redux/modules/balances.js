@@ -13,10 +13,8 @@ export const getAssets = () => {
   return (dispatch, getState) => {
     dispatch(createAction(GET_ASSETS)())
     const params = '&assets=' + balances.assetIds.join('&assets=')
-    console.log(params)
     sendRequest('getAssets', {}, true, params).then((result) => {
       if (result && result.assets) {
-        console.log(result)
         dispatch(getAssetsSuccess(result.assets))
       }
     })

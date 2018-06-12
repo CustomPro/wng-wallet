@@ -21,7 +21,7 @@ const messages = defineMessages({
   },
   invalid_username_email: {
     id: 'invalild_username_email',
-    defaultMessage: 'Currently username, email and password are not matched.'
+    defaultMessage: 'Current username, email and password are not matched.'
   }
 })
 

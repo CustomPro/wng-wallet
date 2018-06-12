@@ -47,7 +47,7 @@ const messages = defineMessages({
   },
   recipient_hint: {
     id: 'sendbalance.recipient_hint',
-    defaultMessage: 'Enter recipient in this format: {token}-XXXX-XXXX-XXXX-XXXX'
+    defaultMessage: 'Enter recipient in this format: {tokenName}-XXXX-XXXX-XXXX-XXXX'
   },
   confirm_send: {
     id: 'confirm_send',

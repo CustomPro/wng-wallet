@@ -531,7 +531,6 @@ Sidebar.propTypes = {
 }
 
 export default injectIntl(connect((state) => {
-  //console.log(state)
   const open = state.site.sidebarOpen
   const moreBalancesSectionOpen = state.site.moreBalancesSectionOpen
   const { isAdmin } = state.auth

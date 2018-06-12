@@ -33,7 +33,6 @@ export const getAccountInformationSuccess = createAction(GET_ACCOUNT_INFORMATION
 export const GET_ACCOUNT_INFORMATION_PROPERTIES = 'GET_ACCOUNT_INFORMATION_PROPERTIES'
 export const getAccountInformationProperties = (account) => {
   return (dispatch, getState) => {
-    console.log('getAccountInformation')
     if (!account) {
       account = getState().auth.account.accountRS
     }
@@ -41,7 +40,6 @@ export const getAccountInformationProperties = (account) => {
     sendRequest('getAccountProperties', {
       recipient: account
     }).then((result) => {
-      console.log(result)
       let properties = {}
       if (result && result.properties) {
         if (result.properties.length > 0) {
@@ -50,7 +48,6 @@ export const getAccountInformationProperties = (account) => {
           })
         }
       }
-      console.log(properties)
       dispatch(getAccountInformationPropertiesSuccess(properties))
     }).fail(() => {
     })

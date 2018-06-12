@@ -64,9 +64,9 @@ const messages = defineMessages({
     id: 'submit',
     defaultMessage: 'Submit'
   },
-  canchel: {
-    id: 'canchel',
-    defaultMessage: 'Canchel'
+  cancel: {
+    id: 'cancel',
+    defaultMessage: 'Cancel'
   },
   required_error: {
     id: 'required_error',
@@ -240,7 +240,6 @@ export class PasswordForm extends React.Component {
   }
 
   handleViewSecretPhrase = () => {
-    console.log(this.state.secretPhraseFieldType)
     if (this.state.secretPhraseFieldType === 'password') {
       this.setState({ secretPhraseFieldType: 'text' })
     } else {
@@ -337,7 +336,7 @@ export class PasswordForm extends React.Component {
           </div>
           <div className={style.submitContainer_button}>
             <Link to='/'>
-              <FlatButton label={renderFormattedMessage(messages.canchel)} />
+              <FlatButton label={renderFormattedMessage(messages.cancel)} />
             </Link>
           </div>
         </div>

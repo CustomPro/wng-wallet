@@ -18,7 +18,6 @@ export const getBlocks = (pageNumber, pageSize) => {
     sendRequest('getBlocks', data).then((result) => {
       if (result) {
         if (result.error) {
-          console.log(result.error)
           dispatch(getBlocksError(result.error))
         }
         let blocks = result.blocks

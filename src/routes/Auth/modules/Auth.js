@@ -97,8 +97,11 @@ export const login = (data) => {
 
     if (data.secretPhraseLogin) {
      /* const RS = getAccountRSFromSecretPhrase(data.secretPhrase, tokenName)
+      const language = localStorage.getItem('wallet_locale') || window.navigator.userLanguage || window.navigator.language
+  
       get('accountRS', {
-        RS: RS
+        RS: RS,
+        language: language
       }).then((result, textStatus, jqXHR) => {
         if (result && result.errorDescription) {
           return $.Deferred().reject(jqXHR, textStatus, result.errorDescription)
@@ -115,9 +118,12 @@ export const login = (data) => {
     } else if (isLocalhost) {
       return findLocalWallet(username)
     } else {
+      let language = localStorage.getItem('wallet_locale') || window.navigator.userLanguage || window.navigator.language
+      if(!language){ language = 'en'}
       get('account', {
         username,
-        email: data.email
+        email: data.email,
+        language: language
       }).then((result, textStatus, jqXHR) => {
         if (result && result.errorDescription) {
           return $.Deferred().reject(jqXHR, textStatus, result.errorDescription)
@@ -158,7 +164,7 @@ export const register = (data) => {
     if (!secretPhrase) {
       secretPhrase = generateSecretPhrase()
     }
-    //console.log(getPublicKey(secretPhrase))
+
     const encrypted = encrypt(secretPhrase, JSON.stringify({
       username: data.username.toLowerCase(),
       email: data.email.toLowerCase(),
@@ -200,15 +206,13 @@ export const getAccount = (account) => {
     if (!account) {
       account = getState().auth.account.accountRS
     }
-    console.log("getAccount")
-    console.log(account)
+
     dispatch(createAction(GET_ACCOUNT)())
     sendRequest('getAccount', {
       account,
       includeEffectiveBalance: true,
       includeAssets: true
     }).then((result) => {
-      console.log(result)
       dispatch(getAccountSuccess(result))
     }).fail(() => {
       dispatch(push('/login'))
@@ -259,13 +263,15 @@ export const verifyEmailError = createAction(VERIFY_EMAIL_ERROR)
 
 export const VERIFY_EMAIL = 'VERIFY_EMAIL'
 export const verifyEmail = (data) => {
-
+  let language = localStorage.getItem('wallet_locale') || window.navigator.userLanguage || window.navigator.language
+  if(!language){ language = 'en'}
   return (dispatch, getState) => {
     dispatch(createAction(VERIFY_EMAIL)())
     post('verifyEmail', {
-        email: data.email.toLowerCase()
+        email: data.email.toLowerCase(),
+        language:language
       }).then((result) => {
-        console.log(result)
+    
         if(result.code == 1){
           dispatch(verifyEmailSuccess())
         }
@@ -286,15 +292,13 @@ export const verifyCodeError = createAction(VERIFY_CODE_ERROR)
 
 export const VERIFY_CODE = 'VERIFY_CODE'
 export const verifyCode = (data) => {
-  console.log('this is verifyCode')
-  console.log(data)
+
   return (dispatch, getState) => {
     dispatch(createAction(VERIFY_CODE)())
     post('verifyCode', {
         email: data.email.toLowerCase(),
         code: data.code
       }).then((result) => {
-        console.log(result)
         if(result.code == 1){
           dispatch(verifyCodeSuccess())
         }

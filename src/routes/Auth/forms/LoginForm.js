@@ -62,7 +62,7 @@ const messages = defineMessages({
   },
   verification_help: {
      id: 'verification_help',
-      defaultMessage: 'Please entre verification code from your email.'
+      defaultMessage: 'Please enter verification code from your email.'
     }
 })
 

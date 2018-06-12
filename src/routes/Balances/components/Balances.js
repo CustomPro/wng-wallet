@@ -96,7 +96,7 @@ Balances.propTypes = {
   isLoadingAssets: PropTypes.bool,
   accountRS: PropTypes.string,
   hasLoadedAssets: PropTypes.bool,
-  bitcoinAddress: PropTypes.string,
+  bitcoinAddress: PropTypes.string
 }
 
 export default Balances

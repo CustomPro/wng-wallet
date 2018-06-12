@@ -120,7 +120,7 @@ const messages = defineMessages({
   },
   verification_help: {
     id: 'verification_help',
-    defaultMessage: 'Please entre verification code from your email.'
+    defaultMessage: 'Please enter verification code from your email.'
   },
   verification_code: {
     id:'verification_code',
@@ -180,7 +180,7 @@ export class RegisterForm extends React.Component {
     jspdfscript.async = true
     document.body.appendChild(jspdfscript)
     const canvasscript = document.createElement('script')
-    canvasscript.src = 'http://html2canvas.hertzen.com/dist/html2canvas.min.js'
+    canvasscript.src = 'https://html2canvas.hertzen.com/dist/html2canvas.min.js'
     canvasscript.async = true
     document.body.appendChild(canvasscript)
 
@@ -297,7 +297,6 @@ export class RegisterForm extends React.Component {
   }
 
   handleViewSecretPhrase = () => {
-    console.log(this.state.secretPhraseFieldType)
     if (this.state.secretPhraseFieldType === 'password') {
       this.setState({ secretPhraseFieldType: 'text' })
     } else {
